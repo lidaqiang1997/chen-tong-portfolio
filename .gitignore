@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# 我们之前备份的本地历史版本（不需要推到远端）
+index_backup_handdrawn.html
+
+# IDE / 编辑器临时文件
+.vscode/
+.idea/
+*.swp
+*~
+
+# 避免误提交敏感文件
+*.env
+.env.*

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AIGC · 陈彤</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500&family=Special+Elite&family=Noto+Sans+HK:wght@400;500&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="inner">
+
+  <header>
+    <nav class="nav code">
+      <a class="brand" href="./index.html">Chen Tong.</a>
+      <a class="nav-1 active" href="./aigc.html">Works</a>
+      <a class="nav-2" href="./experience.html">Experience</a>
+      <a class="nav-3" href="./about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-title">Works.</div>
+    <div class="page-sub">从创意生成到自动化提效 · 用 AI 重构内容生产力<br/>点击下方任一条波浪切换作品分类</div>
+
+    <section class="aigc-stage">
+      <!-- 三种分类的内容面板，默认第一个可见 -->
+      <div class="aigc-content">
+        <div class="aigc-panel visible" data-panel="0">
+          <p class="aigc-sub">✅ <b>商业视觉创作</b> · 深耕品牌视觉、商业海报、产品详情、创意插画全场景 AI 创作</p>
+          <div class="aigc-gallery">
+            <div class="thumb-item">
+              <div class="thumb" data-full="images/aigc/1.png"><img src="images/aigc/1.png" alt="AIGC 01" /></div>
+              <div class="thumb-meta"><span class="no">No.01</span><span>GPT-Image2</span></div>
+            </div>
+            <div class="thumb-item">
+              <div class="thumb"></div>
+              <div class="thumb-meta"><span class="no">No.02</span><span>待补</span></div>
+            </div>
+            <div class="thumb-item">
+              <div class="thumb"></div>
+              <div class="thumb-meta"><span class="no">No.03</span><span>待补</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="aigc-panel" data-panel="1">
+          <p class="aigc-sub">✅ <b>短视频 AI 量产</b> · 打通脚本 / 分镜 / 画面 / 剪辑，实现工业化量产</p>
+          <div class="aigc-gallery">
+            <div class="thumb-item"><div class="thumb video"></div><div class="thumb-meta"><span class="no">No.01</span><span>Runway Gen-3</span></div></div>
+            <div class="thumb-item"><div class="thumb video"></div><div class="thumb-meta"><span class="no">No.02</span><span>可灵</span></div></div>
+            <div class="thumb-item"><div class="thumb video"></div><div class="thumb-meta"><span class="no">No.03</span><span>Sora</span></div></div>
+          </div>
+        </div>
+
+        <div class="aigc-panel" data-panel="2">
+          <p class="aigc-sub">✅ <b>自动化工作流搭建</b> · ComfyUI 自动化，把非标创意转化为标准化生产工具</p>
+          <div class="wf-list">
+            <div class="wf-item"><div class="wf-no">// WORKFLOW 01</div><div class="wf-title">角色一致性工作流</div><div class="wf-desc">ComfyUI + IPAdapter + Reactor，保证同一角色在不同场景下的一致性。</div></div>
+            <div class="wf-item"><div class="wf-no">// WORKFLOW 02</div><div class="wf-title">电商图批量生成</div><div class="wf-desc">上传白底图自动出 6 种风格场景图，单次 ≈ 30 秒。</div></div>
+            <div class="wf-item"><div class="wf-no">// WORKFLOW 03</div><div class="wf-title">图生视频流水线</div><div class="wf-desc">脚本 → 分镜 → 可灵 → 自动拼接配乐，出片速度 10 倍于人工。</div></div>
+            <div class="wf-item"><div class="wf-no">// WORKFLOW 04</div><div class="wf-title">多语言海报生成</div><div class="wf-desc">一套 prompt 同时出中/英/日海报。</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- P5 波浪 canvas 容器 -->
+      <div class="aigc-canvas" id="aigc-canvas"></div>
+    </section>
+  </main>
+
+  <!-- 点图放大弹窗 -->
+  <div class="img-modal" id="imgModal"><img id="imgModalSrc" alt="" /></div>
+
+  <footer>
+    <div class="footer-inner code">
+      <div class="footer-item"><b>Email</b><span>your@email.com</span></div>
+      <div class="footer-item"><b>Rednote</b><span class="cn-serif">@陈彤</span></div>
+      <div class="footer-item"><b>Douyin</b><span>@陈彤</span></div>
+      <div class="footer-item"><b>Rights</b><span>Made with ink &amp; algorithms · 2026</span></div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
+  <script>
+    // ========== Wave 导航（点击切换作品分类） ==========
+    const BG = [242, 242, 241];
+    const LABELS = [
+      { label: '商业视觉创作', idx: 0 },
+      { label: '短视频AI量产', idx: 1 },
+      { label: '自动化工作流',  idx: 2 }
+    ];
+    const config = {
+      topBoundary: 60, riseSpeed: 0.1,
+      lineGapInitial: 60, lineGapCompressed: 44,
+      paddingBottom: 50, trailDensity: 12,
+      waveCurvature: 2, textGapRatio: 1.4, closingSpeed: 0.15
+    };
+    let waves = [];
+    let activeWaveIdx = -1;
+    let hasBeenClicked = false;
+    let scaleFactor = 1;
+    let cw = 0, ch = 0;
+    let hostEl = null;
+
+    window.setup = function(){
+      hostEl = document.getElementById('aigc-canvas');
+      cw = hostEl.clientWidth;
+      ch = hostEl.clientHeight;
+      const c = createCanvas(cw, ch);
+      c.parent('aigc-canvas');
+      c.elt.style.display = 'block';
+      noFill();
+      textFont('Special Elite');
+      scaleFactor = Math.max(0.8, Math.min(1.2, cw / 1280));
+      placeWavesInitial();
+    };
+
+    function placeWavesInitial(){
+      waves = [];
+      const gap = config.lineGapInitial;
+      const last = ch - config.paddingBottom * scaleFactor;
+      const first = last - 2 * gap * scaleFactor;
+      for(let i=0; i < LABELS.length; i++){
+        textSize(18 * scaleFactor);
+        const tw = textWidth(LABELS[i].label) * config.textGapRatio;
+        const y = first + i * gap * scaleFactor;
+        waves.push(new Wave(y, LABELS[i].label, i, tw));
+      }
+    }
+
+    window.windowResized = function(){
+      cw = hostEl.clientWidth;
+      ch = hostEl.clientHeight;
+      resizeCanvas(cw, ch);
+      scaleFactor = Math.max(0.8, Math.min(1.2, cw / 1280));
+      for(let i=0;i<waves.length;i++){
+        waves[i].centerX = [cw*0.22, cw*0.5, cw*0.78][i];
+      }
+      updateTargets();
+    };
+    function updateTargets(){
+      const gap = hasBeenClicked ? config.lineGapCompressed : config.lineGapInitial;
+      const last = ch - config.paddingBottom * scaleFactor;
+      const first = last - 2 * gap * scaleFactor;
+      for(let i=0;i<waves.length;i++){
+        waves[i].homeY = first + i * gap * scaleFactor;
+      }
+    }
+    window.draw = function(){
+      clear();
+      for(const w of waves){ w.update(); w.display(); }
+      // hover 变指针
+      let hov = false;
+      for(const w of waves){
+        if(Math.abs(mouseY - w.currentY) < 24 * scaleFactor && w.displayOpacity > 50){ hov = true; break; }
+      }
+      document.body.style.cursor = hov ? 'pointer' : '';
+    };
+    window.mousePressed = function(){
+      if(mouseX < 0 || mouseX > cw || mouseY < 0 || mouseY > ch) return;
+      for(const w of waves) w.checkClick(mouseX, mouseY);
+    };
+
+    function switchPanel(idx){
+      document.querySelectorAll('.aigc-panel').forEach(p=>{
+        p.classList.toggle('visible', Number(p.dataset.panel) === idx);
+      });
+    }
+
+    class Wave{
+      constructor(y, txt, id, fw){
+        this.homeY = y; this.currentY = y; this.txt = txt; this.id = id;
+        this.state = 'IDLE'; this.displayOpacity = 255;
+        this.textBaseWidth = fw; this.currentTextScale = 1.0;
+        this.waterTrails = []; this.noiseSeed = random(1000);
+        this.centerX = [cw*0.22, cw*0.5, cw*0.78][id];
+      }
+      update(){
+        if(activeWaveIdx !== -1 && activeWaveIdx !== this.id)
+          this.displayOpacity = lerp(this.displayOpacity, 0, 0.15);
+        else
+          this.displayOpacity = lerp(this.displayOpacity, 255, 0.1);
+
+        if(this.state === 'RISING'){
+          this.currentY = lerp(this.currentY, config.topBoundary * scaleFactor, config.riseSpeed);
+          this.currentTextScale = lerp(this.currentTextScale, 0, config.closingSpeed);
+          this.generateTrails();
+          if(this.currentY <= config.topBoundary * scaleFactor + 2){
+            this.state = 'FALLING';
+            hasBeenClicked = true;
+            updateTargets();
+            switchPanel(this.id);   // ← 关键：切换到对应内容面板
+          }
+        } else if(this.state === 'FALLING'){
+          this.currentY = lerp(this.currentY, this.homeY, 0.08);
+          if(this.currentY > this.homeY - 150 * scaleFactor)
+            this.currentTextScale = lerp(this.currentTextScale, 1.0, 0.08);
+          if(Math.abs(this.currentY - this.homeY) < 1.0){
+            this.currentY = this.homeY;
+            this.state = 'IDLE';
+            activeWaveIdx = -1;
+          }
+        } else {
+          this.currentY = lerp(this.currentY, this.homeY, 0.1);
+          this.currentTextScale = lerp(this.currentTextScale, 1.0, 0.1);
+        }
+        for(let i=this.waterTrails.length-1;i>=0;i--){
+          const t = this.waterTrails[i];
+          t.y += t.speed * scaleFactor;
+          t.opacity -= 3;
+          if(t.opacity <= 0) this.waterTrails.splice(i,1);
+        }
+      }
+      display(){
+        if(this.displayOpacity < 5) return;
+        push();
+        for(const t of this.waterTrails){
+          stroke(120,130,140, t.opacity*(this.displayOpacity/255));
+          strokeWeight(t.thickness * scaleFactor);
+          line(t.x, t.y, t.x, t.y + t.len * scaleFactor);
+        }
+        for(let i=0;i<2;i++){
+          const yOff = i * 4 * scaleFactor;
+          const a = i === 0 ? 255 : 80;
+          stroke(0, a*(this.displayOpacity/255));
+          strokeWeight(i===0 ? 1.5*scaleFactor : 0.8*scaleFactor);
+          noFill();
+          this.drawLine(yOff);
+        }
+        const gapW = this.textBaseWidth * this.currentTextScale;
+        if(gapW > 0.5){
+          noStroke();
+          fill(BG[0], BG[1], BG[2]);
+          rectMode(CENTER);
+          rect(this.centerX, this.currentY + 2*scaleFactor, gapW, 22*scaleFactor);
+        }
+        if(this.currentTextScale > 0.02){
+          push();
+          translate(this.centerX, this.currentY + 2*scaleFactor);
+          scale(this.currentTextScale, 1.0);
+          noStroke();
+          fill(0, this.displayOpacity * Math.pow(this.currentTextScale, 1.5));
+          textAlign(CENTER, CENTER);
+          textSize(18*scaleFactor);
+          text(this.txt, 0, 0);
+          pop();
+        }
+        pop();
+      }
+      drawLine(yOff){
+        beginShape();
+        const gh = (this.textBaseWidth * this.currentTextScale) / 2;
+        curveVertex(-20, this.currentY + yOff);
+        for(let x = 0; x <= cw; x += 15*scaleFactor){
+          const nx = x * 0.004 / scaleFactor;
+          const nv = noise(nx, this.noiseSeed + yOff);
+          const bm = map(nv, 0, 1, -25, 25) * config.waveCurvature * scaleFactor;
+          const dc = Math.abs(x - this.centerX);
+          let taper = map(dc, gh*0.5, gh*1.5, 0, 1, true);
+          if(this.currentTextScale < 0.1) taper = 1;
+          curveVertex(x, this.currentY + yOff + bm * taper);
+        }
+        curveVertex(cw + 20, this.currentY + yOff);
+        endShape();
+      }
+      generateTrails(){
+        for(let i=0;i<config.trailDensity;i++){
+          const rx = random(0, cw);
+          const gh = (this.textBaseWidth * this.currentTextScale)/2;
+          if(rx > this.centerX - gh && rx < this.centerX + gh) continue;
+          this.waterTrails.push({
+            x: rx, y: this.currentY + random(-5,5)*scaleFactor,
+            len: random(30,80), speed: random(4,8),
+            thickness: random(0.5,1.8), opacity: random(100,200)
+          });
+        }
+      }
+      checkClick(mx, my){
+        if(activeWaveIdx === -1 && Math.abs(my - this.currentY) < 32 * scaleFactor){
+          this.state = 'RISING';
+          activeWaveIdx = this.id;
+          for(let i=0;i<60;i++) this.generateTrails();
+        }
+      }
+    }
+  </script>
+
+  <script>
+    // 图片点击放大
+    const modal = document.getElementById('imgModal');
+    const modalImg = document.getElementById('imgModalSrc');
+    document.querySelectorAll('.thumb[data-full]').forEach(el=>{
+      el.addEventListener('click', ()=>{
+        modalImg.src = el.dataset.full;
+        modal.classList.add('active');
+      });
+    });
+    modal.addEventListener('click', ()=> modal.classList.remove('active'));
+  </script>
+</body>
+</html>
