@@ -24,27 +24,27 @@
     <section class="portfolio-visual">
       <div class="ptree-wrap">
         <!-- 纯树（无橙子），来自 Figma toptree 原始填充 -->
-        <img class="ptree" src="./images/portfolio/toptree.png" alt="orange tree" />
+        <img loading="lazy" class="ptree" src="./images/portfolio/toptree.png" alt="orange tree" />
 
         <!-- 4 颗橙子：单独 PNG + 文字标签，位置按 Figma 每个 group 的百分比 -->
         <a class="ptree-orange ip" href="javascript:void(0)" data-kind="ip"
            aria-label="IP 全链路创作">
-          <img src="./images/portfolio/ip.png" alt="" />
+          <img loading="lazy" src="./images/portfolio/ip.png" alt="" />
           <span class="ptree-label">IP</span>
         </a>
         <a class="ptree-orange chuangzuo" href="javascript:void(0)" data-kind="visual"
            data-peel="./images/oranges/ocean-peel-long.png" aria-label="海报创作">
-          <img src="./images/portfolio/chuangzuo.png" alt="" />
+          <img loading="lazy" src="./images/portfolio/chuangzuo.png" alt="" />
           <span class="ptree-label">海报</span>
         </a>
         <a class="ptree-orange shipin" href="javascript:void(0)" data-kind="video"
            data-peel="./images/oranges/grasslan-peel-long.png" aria-label="AI 短视频">
-          <img src="./images/portfolio/shipin.png" alt="" />
+          <img loading="lazy" src="./images/portfolio/shipin.png" alt="" />
           <span class="ptree-label">AI视频</span>
         </a>
         <a class="ptree-orange gongzuoliu" href="javascript:void(0)" data-kind="workflow"
            aria-label="自动化工作流">
-          <img src="./images/portfolio/gongzuoliu.png" alt="" />
+          <img loading="lazy" src="./images/portfolio/gongzuoliu.png" alt="" />
           <span class="ptree-label">工作流</span>
         </a>
       </div>
@@ -61,19 +61,19 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-item">
-        <img class="footer-icon" src="./images/UI_new/Email.png" alt="Email" />
+        <img loading="lazy" class="footer-icon" src="./images/UI_new/Email.png" alt="Email" />
         <a href="mailto:494885025@qq.com">494885025@qq.com</a>
       </div>
       <div class="footer-item">
-        <img class="footer-icon" src="./images/UI_new/Rednote.png" alt="Rednote" />
+        <img loading="lazy" class="footer-icon" src="./images/UI_new/Rednote.png" alt="Rednote" />
         <a href="https://www.xiaohongshu.com/user/profile/608949a9000000000101de95?xsec_token=ABeM8Un3uuypA7dOGqYhXfcfPrAej8FT4cInKEH543rTo%3D&amp;xsec_source=pc_search" target="_blank" rel="noopener">一只橙橙子</a>
       </div>
       <div class="footer-item">
-        <img class="footer-icon" src="./images/UI_new/Linkedin.png" alt="LinkedIn" />
+        <img loading="lazy" class="footer-icon" src="./images/UI_new/Linkedin.png" alt="LinkedIn" />
         <a href="https://www.linkedin.com/in/tongchen00/" target="_blank" rel="noopener">www.linkedin.com/in/tongchen00/</a>
       </div>
       <div class="footer-item">
-        <img class="footer-icon" src="./images/UI_new/Rights.png" alt="Rights" />
+        <img loading="lazy" class="footer-icon" src="./images/UI_new/Rights.png" alt="Rights" />
         <span>Growing ideas, one orange at a time.</span>
       </div>
     </div>
@@ -91,7 +91,7 @@
 
   <!-- 创作橙子：拖动生长树枝 + 7 张海报随枝条出现 -->
   <div class="branch-stage" id="branchStage">
-    <img class="branch-svg" id="branchSvg" src="./images/portfolio/branch.svg" alt="" />
+    <img loading="lazy" class="branch-svg" id="branchSvg" src="./images/portfolio/branch.svg" alt="" />
     <div class="branch-posters">
       <a class="bp" style="--x:7.14%"  data-n="1" data-src="./images/works/posters/p01.png" href="javascript:void(0)"></a>
       <a class="bp" style="--x:21.43%" data-n="2" data-src="./images/works/posters/p02.png" href="javascript:void(0)"></a>
@@ -105,7 +105,7 @@
 
   <!-- 视频橙子：拖动生长树枝 + 6 个视频随枝条出现 -->
   <div class="branch-stage branch-stage-video" id="branchStageVideo">
-    <img class="branch-svg" id="branchSvgVideo" src="./images/portfolio/branch.svg" alt="" />
+    <img loading="lazy" class="branch-svg" id="branchSvgVideo" src="./images/portfolio/branch.svg" alt="" />
     <div class="branch-posters">
       <div class="bv" style="--x:8.33%"  data-n="1" data-src="./images/works/videos/v01.mp4">
         <a class="bv-player" href="javascript:void(0)"></a>
@@ -137,12 +137,12 @@
   <!-- 视频播放弹窗（点击视频卡打开） -->
   <div class="video-modal" id="videoModal" aria-hidden="true">
     <button class="video-modal-close code" id="videoModalClose" aria-label="Close">CLOSE ×</button>
-    <video class="video-modal-player" id="videoModalPlayer" controls playsinline></video>
+    <video preload="none" class="video-modal-player" id="videoModalPlayer" controls playsinline></video>
   </div>
 
   <!-- 海报点击放大 -->
   <div class="img-modal" id="imgModal">
-    <img id="imgModalSrc" alt="" />
+    <img loading="lazy" id="imgModalSrc" alt="" />
   </div>
 
   <script>
@@ -390,7 +390,7 @@
       }
 
       peelBoard.innerHTML = `
-        ${peelSrc ? `<img class="peel-long" src="${peelSrc}" alt="" aria-hidden="true" />` : ''}
+        ${peelSrc ? `<img loading="lazy" class="peel-long" src="${peelSrc}" alt="" aria-hidden="true" />` : ''}
         <div class="peel-items">${items}</div>
       `;
 
@@ -508,7 +508,7 @@
               <p><strong>生成：</strong>通过精准 Prompt 引导 AI 产出 Q 版拟人风格初稿</p>
               <p><strong>判断：</strong>AI 生成版本完整保留了品牌核心识别元素，但风格缺乏记忆点，不断细化</p>
             </div>
-            <img class="timeline-img" src="./images/works/ip/step01-sketch-web.png" alt="参照 · 初稿 · 过程 · 终稿" />
+            <img loading="lazy" class="timeline-img" src="./images/works/ip/step01-sketch-web.png" alt="参照 · 初稿 · 过程 · 终稿" />
           </div>
           <div class="timeline-node">
             <div class="timeline-step">STEP 02 · 量产</div>
@@ -519,13 +519,13 @@
               <p><strong>交付：</strong>3 天内完成全套运营物料制作，大幅缩短项目周期</p>
             </div>
             <div class="step02-media">
-              <img class="media-outfits"  src="./images/works/ip/step02-sketch-web.png" alt="Data 酱换装 & 表情包" />
+              <img loading="lazy" class="media-outfits"  src="./images/works/ip/step02-sketch-web.png" alt="Data 酱换装 & 表情包" />
               <div class="media-animated-wrap">
-                <img class="media-animated" src="./images/works/ip/data-web.gif" alt="Data 酱动态展示" />
+                <img loading="lazy" class="media-animated" src="./images/works/ip/data-web.gif" alt="Data 酱动态展示" />
               </div>
             </div>
             <!-- 三视图 + 周边 + 海报 -->
-            <img class="timeline-img step02-extra" src="./images/works/ip/step03-sketch-web.png" alt="Data 酱三视图 & 周边 & 海报" />
+            <img loading="lazy" class="timeline-img step02-extra" src="./images/works/ip/step03-sketch-web.png" alt="Data 酱三视图 & 周边 & 海报" />
           </div>
           <div class="timeline-node">
             <div class="timeline-step">STEP 03 · 上线</div>
@@ -538,10 +538,10 @@
             <div class="step03-layout">
               <div class="step03-left">
                 <a class="step03-avatar-link" href="https://www.xiaohongshu.com/user/profile/68c28c8d0000000019010ef7?xsec_token=ABPSlFaeQjuJcKd2lrpcUtEYLAq_oq2IMIG2usX8Av1II%3D&amp;xsec_source=pc_search" target="_blank" rel="noopener" aria-label="Data 酱小红书主页">
-                  <img class="step03-avatar" src="./images/works/ip/step06-sketch.png" alt="Data 酱头像" />
+                  <img loading="lazy" class="step03-avatar" src="./images/works/ip/step06-sketch.png" alt="Data 酱头像" />
                   <span class="step03-hint">点击查看</span>
                 </a>
-                <img class="step03-main" src="./images/works/ip/step05-sketch.png" alt="Data 账号主页" />
+                <img loading="lazy" class="step03-main" src="./images/works/ip/step05-sketch.png" alt="Data 账号主页" />
               </div>
               <div class="step03-right">
                 <div class="step03-videos">
@@ -580,16 +580,16 @@
             </div>
             <div class="ip-shots">
               <a class="ip-shot" href="javascript:void(0)" data-src="./images/works/ip/shot01.png">
-                <img src="./images/works/ip/shot01.png" alt="数据截图 1" />
+                <img loading="lazy" src="./images/works/ip/shot01.png" alt="数据截图 1" />
               </a>
               <a class="ip-shot" href="javascript:void(0)" data-src="./images/works/ip/shot02.jpg">
-                <img src="./images/works/ip/shot02.jpg" alt="数据截图 2" />
+                <img loading="lazy" src="./images/works/ip/shot02.jpg" alt="数据截图 2" />
               </a>
               <a class="ip-shot" href="javascript:void(0)" data-src="./images/works/ip/shot03.png">
-                <img src="./images/works/ip/shot03.png" alt="数据截图 3" />
+                <img loading="lazy" src="./images/works/ip/shot03.png" alt="数据截图 3" />
               </a>
               <a class="ip-shot" href="javascript:void(0)" data-src="./images/works/ip/shot04.png">
-                <img src="./images/works/ip/shot04.png" alt="数据截图 4" />
+                <img loading="lazy" src="./images/works/ip/shot04.png" alt="数据截图 4" />
               </a>
             </div>
           </div>
@@ -624,32 +624,32 @@
 
             <div class="wf-showcase">
               <div class="wf-board">
-                <img class="wf-b-guide" src="./images/works/workflow/stage01/box-art.png" alt="指南封面" />
+                <img loading="lazy" class="wf-b-guide" src="./images/works/workflow/stage01/box-art.png" alt="指南封面" />
                 <div class="wf-b-intro">
                   <p><strong>项目：</strong>电商包包品类 AI 提示词指南</p>
                   <p><strong>贡献：</strong>封装复杂操作，提升平台使用率</p>
                 </div>
 
-                <img class="wf-b-bag-1" src="./images/works/workflow/stage01/bag-01.png" alt="" />
+                <img loading="lazy" class="wf-b-bag-1" src="./images/works/workflow/stage01/bag-01.png" alt="" />
 
                 <div class="wf-b-prompt wf-b-pos-change">
                   <div class="wf-b-card">prompt：更换包包的材质，替换成鳄鱼纹压花材质 / 金属铆钉材质等。</div>
                   <div class="wf-b-tag">变更材质</div>
                 </div>
-                <img class="wf-b-prod-1" src="./images/works/workflow/stage01/product-01.png" alt="" />
-                <img class="wf-b-prod-2" src="./images/works/workflow/stage01/product-02.png" alt="" />
-                <img class="wf-b-prod-3" src="./images/works/workflow/stage01/product-03.png" alt="" />
+                <img loading="lazy" class="wf-b-prod-1" src="./images/works/workflow/stage01/product-01.png" alt="" />
+                <img loading="lazy" class="wf-b-prod-2" src="./images/works/workflow/stage01/product-02.png" alt="" />
+                <img loading="lazy" class="wf-b-prod-3" src="./images/works/workflow/stage01/product-03.png" alt="" />
 
-                <img class="wf-b-bag-2" src="./images/works/workflow/stage01/bag-01.png" alt="" />
+                <img loading="lazy" class="wf-b-bag-2" src="./images/works/workflow/stage01/bag-01.png" alt="" />
 
-                <img class="wf-b-gen-1" src="./images/works/workflow/stage01/gen-01.png" alt="" />
-                <img class="wf-b-gen-2" src="./images/works/workflow/stage01/gen-02.png" alt="" />
+                <img loading="lazy" class="wf-b-gen-1" src="./images/works/workflow/stage01/gen-01.png" alt="" />
+                <img loading="lazy" class="wf-b-gen-2" src="./images/works/workflow/stage01/gen-02.png" alt="" />
                 <div class="wf-b-prompt wf-b-pos-poster">
                   <div class="wf-b-card">prompt：生成该包包的商品详情页，突出铆钉材质、时尚美观实用场景，高级简约。</div>
                   <div class="wf-b-tag">电商海报</div>
                 </div>
 
-                <img class="wf-b-bag-3" src="./images/works/workflow/stage01/bag-01.png" alt="" />
+                <img loading="lazy" class="wf-b-bag-3" src="./images/works/workflow/stage01/bag-01.png" alt="" />
 
                 <div class="wf-b-prompt wf-b-pos-video">
                   <div class="wf-b-card">按分镜去生成每一分镜的画面。<br/>先文生图，再图生视频。</div>
@@ -675,11 +675,11 @@
 
             <div class="wf-showcase wf-showcase-2">
               <div class="wf-board wf-board-2">
-                <img class="wf-s2-screenshot" src="./images/works/workflow/stage02/comfy-ui-screenshot.png" alt="ComfyUI 工作界面" />
-                <img class="wf-s2-cy-icon" src="./images/works/workflow/stage02/comfyui-icon.png" alt="" />
+                <img loading="lazy" class="wf-s2-screenshot" src="./images/works/workflow/stage02/comfy-ui-screenshot.png" alt="ComfyUI 工作界面" />
+                <img loading="lazy" class="wf-s2-cy-icon" src="./images/works/workflow/stage02/comfyui-icon.png" alt="" />
                 <div class="wf-s2-cy-text">自学部署<br/>ComfyUI</div>
                 <a class="wf-s2-code-link" href="./images/works/workflow/stage02/comfyui-workflow.json" download="ComfyUI电商精修工作流.json">
-                  <img class="wf-s2-code" src="./images/works/workflow/stage02/code-block.png" alt="" />
+                  <img loading="lazy" class="wf-s2-code" src="./images/works/workflow/stage02/code-block.png" alt="" />
                   <div class="wf-s2-code-text">点击<br/>下载代码</div>
                 </a>
 
@@ -688,28 +688,28 @@
                   <p><strong>贡献：</strong>整合多步操作，人工干预减少 80%</p>
                 </div>
 
-                <img class="wf-s2-leaves" src="./images/works/workflow/stage02/leaves.png" alt="" />
-                <img class="wf-s2-photo" src="./images/works/workflow/stage02/phone-photo.png" alt="手机随手拍" />
+                <img loading="lazy" class="wf-s2-leaves" src="./images/works/workflow/stage02/leaves.png" alt="" />
+                <img loading="lazy" class="wf-s2-photo" src="./images/works/workflow/stage02/phone-photo.png" alt="手机随手拍" />
                 <div class="wf-s2-photo-label">手机随手拍</div>
 
-                <img class="wf-s2-bag-2" src="./images/works/workflow/stage01/bag-01.png" alt="" />
+                <img loading="lazy" class="wf-s2-bag-2" src="./images/works/workflow/stage01/bag-01.png" alt="" />
 
-                <img class="wf-s2-graph" src="./images/works/workflow/stage02/workflow-graph.png" alt="ComfyUI 节点图" />
+                <img loading="lazy" class="wf-s2-graph" src="./images/works/workflow/stage02/workflow-graph.png" alt="ComfyUI 节点图" />
                 <div class="wf-s2-graph-label">搭建工作流</div>
 
-                <img class="wf-s2-prod-1" src="./images/works/workflow/stage02/main-product-1.png" alt="" />
-                <img class="wf-s2-prod-2" src="./images/works/workflow/stage02/main-product-2.png" alt="" />
+                <img loading="lazy" class="wf-s2-prod-1" src="./images/works/workflow/stage02/main-product-1.png" alt="" />
+                <img loading="lazy" class="wf-s2-prod-2" src="./images/works/workflow/stage02/main-product-2.png" alt="" />
                 <div class="wf-s2-prod-label">标准电商主图</div>
 
-                <img class="wf-s2-bag-1" src="./images/works/workflow/stage01/bag-01.png" alt="" />
+                <img loading="lazy" class="wf-s2-bag-1" src="./images/works/workflow/stage01/bag-01.png" alt="" />
 
-                <img class="wf-s2-poster" src="./images/works/workflow/stage02/creative-poster.png" alt="" />
+                <img loading="lazy" class="wf-s2-poster" src="./images/works/workflow/stage02/creative-poster.png" alt="" />
                 <div class="wf-s2-poster-label">创意海报</div>
 
                 <a class="wf-s2-video bv-player" data-src="./images/works/workflow/stage02/creative-video.mp4" data-cover="./images/works/workflow/stage02/creative-video-cover.png" href="javascript:void(0)" aria-label="播放创意视频"></a>
                 <div class="wf-s2-video-label">创意视频</div>
 
-                <img class="wf-s2-bag-3" src="./images/works/workflow/stage01/bag-01.png" alt="" />
+                <img loading="lazy" class="wf-s2-bag-3" src="./images/works/workflow/stage01/bag-01.png" alt="" />
 
                 <div class="wf-s2-flow">
                   <p><strong>原流程：</strong>专业拍摄 → PS 抠图 → 调色调 → 换背景 → 导出（5 步 / 2 小时）</p>
@@ -731,9 +731,9 @@
             <div class="wf-showcase wf-showcase-3">
               <div class="wf-board wf-board-3">
 
-                <img class="wf-s3-graph" src="./images/works/workflow/stage03/ps-comfyui-graph.png" alt="ComfyUI+PS 混合流" />
-                <img class="wf-s3-cy-icon" src="./images/works/workflow/stage02/comfyui-icon.png" alt="" />
-                <img class="wf-s3-ps-icon" src="./images/works/workflow/stage03/ps-icon.png" alt="" />
+                <img loading="lazy" class="wf-s3-graph" src="./images/works/workflow/stage03/ps-comfyui-graph.png" alt="ComfyUI+PS 混合流" />
+                <img loading="lazy" class="wf-s3-cy-icon" src="./images/works/workflow/stage02/comfyui-icon.png" alt="" />
+                <img loading="lazy" class="wf-s3-ps-icon" src="./images/works/workflow/stage03/ps-icon.png" alt="" />
                 <div class="wf-s3-mix-label">ComfyUI+PS混合流</div>
 
                 <div class="wf-s3-intro">
@@ -741,24 +741,24 @@
                   <p><strong>贡献：</strong>ComfyUI+PS 混合流，赋能设计团队</p>
                 </div>
 
-                <img class="wf-s3-char"   src="./images/works/workflow/stage03/char-white.png" alt="" />
-                <img class="wf-s3-size-1" src="./images/works/workflow/stage03/size-1.png" alt="" />
-                <img class="wf-s3-size-2" src="./images/works/workflow/stage03/size-2.png" alt="" />
-                <img class="wf-s3-size-3" src="./images/works/workflow/stage03/size-3.png" alt="" />
-                <img class="wf-s3-size-4" src="./images/works/workflow/stage03/size-4.png" alt="" />
+                <img loading="lazy" class="wf-s3-char"   src="./images/works/workflow/stage03/char-white.png" alt="" />
+                <img loading="lazy" class="wf-s3-size-1" src="./images/works/workflow/stage03/size-1.png" alt="" />
+                <img loading="lazy" class="wf-s3-size-2" src="./images/works/workflow/stage03/size-2.png" alt="" />
+                <img loading="lazy" class="wf-s3-size-3" src="./images/works/workflow/stage03/size-3.png" alt="" />
+                <img loading="lazy" class="wf-s3-size-4" src="./images/works/workflow/stage03/size-4.png" alt="" />
                 <div class="wf-s3-btn wf-s3-btn-size">变更尺寸</div>
 
-                <img class="wf-s3-pose-1" src="./images/works/workflow/stage03/pose-1.png?v=2" alt="" />
-                <img class="wf-s3-pose-2" src="./images/works/workflow/stage03/pose-2.png" alt="" />
+                <img loading="lazy" class="wf-s3-pose-1" src="./images/works/workflow/stage03/pose-1.png?v=2" alt="" />
+                <img loading="lazy" class="wf-s3-pose-2" src="./images/works/workflow/stage03/pose-2.png" alt="" />
                 <div class="wf-s3-btn wf-s3-btn-pose">变更动作</div>
 
-                <img class="wf-s3-outfit-1" src="./images/works/workflow/stage03/outfit-1.png" alt="" />
-                <img class="wf-s3-outfit-2" src="./images/works/workflow/stage03/outfit-2.png" alt="" />
+                <img loading="lazy" class="wf-s3-outfit-1" src="./images/works/workflow/stage03/outfit-1.png" alt="" />
+                <img loading="lazy" class="wf-s3-outfit-2" src="./images/works/workflow/stage03/outfit-2.png" alt="" />
                 <div class="wf-s3-btn wf-s3-btn-outfit">变更服饰</div>
 
-                <img class="wf-s3-lineart" src="./images/works/workflow/stage03/lineart.png" alt="" />
-                <img class="wf-s3-tv-1" src="./images/works/workflow/stage03/three-view-1-4e0c18.png" alt="" />
-                <img class="wf-s3-tv-2" src="./images/works/workflow/stage03/three-view-2-6be605.png" alt="" />
+                <img loading="lazy" class="wf-s3-lineart" src="./images/works/workflow/stage03/lineart.png" alt="" />
+                <img loading="lazy" class="wf-s3-tv-1" src="./images/works/workflow/stage03/three-view-1-4e0c18.png" alt="" />
+                <img loading="lazy" class="wf-s3-tv-2" src="./images/works/workflow/stage03/three-view-2-6be605.png" alt="" />
                 <div class="wf-s3-btn wf-s3-btn-color">一键上色</div>
                 <div class="wf-s3-btn wf-s3-btn-views">三视图</div>
 
