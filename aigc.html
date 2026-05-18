@@ -3,301 +3,784 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AIGC · 陈彤</title>
+  <title>Portfolio · 陈彤</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500&family=Special+Elite&family=Noto+Sans+HK:wght@400;500&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500&family=Inter:wght@300;400;600&family=Special+Elite&family=Noto+Sans+HK:wght@400;500&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="inner">
+<body class="portfolio">
 
   <header>
-    <nav class="nav code">
-      <a class="brand" href="./index.html">Chen Tong.</a>
-      <a class="nav-1 active" href="./aigc.html">Works</a>
-      <a class="nav-2" href="./experience.html">Experience</a>
-      <a class="nav-3" href="./about.html">About</a>
+    <nav class="pnav">
+      <a class="pnav-item" href="./index.html">Home</a>
+      <a class="pnav-item active" href="./aigc.html">Portfolio</a>
+      <a class="pnav-item" href="./experience.html">Experience</a>
+      <a class="pnav-item" href="./about.html">Introduction</a>
     </nav>
   </header>
 
-  <main>
-    <div class="page-title">Works.</div>
-    <div class="page-sub">从创意生成到自动化提效 · 用 AI 重构内容生产力<br/>点击下方任一条波浪切换作品分类</div>
+  <main class="portfolio-stage">
+    <section class="portfolio-visual">
+      <div class="ptree-wrap">
+        <!-- 纯树（无橙子），来自 Figma toptree 原始填充 -->
+        <img class="ptree" src="./images/portfolio/toptree.png" alt="orange tree" />
 
-    <section class="aigc-stage">
-      <!-- 三种分类的内容面板，默认第一个可见 -->
-      <div class="aigc-content">
-        <div class="aigc-panel visible" data-panel="0">
-          <p class="aigc-sub">✅ <b>商业视觉创作</b> · 深耕品牌视觉、商业海报、产品详情、创意插画全场景 AI 创作</p>
-          <div class="aigc-gallery">
-            <div class="thumb-item">
-              <div class="thumb" data-full="images/aigc/1.png"><img src="images/aigc/1.png" alt="AIGC 01" /></div>
-              <div class="thumb-meta"><span class="no">No.01</span><span>GPT-Image2</span></div>
-            </div>
-            <div class="thumb-item">
-              <div class="thumb"></div>
-              <div class="thumb-meta"><span class="no">No.02</span><span>待补</span></div>
-            </div>
-            <div class="thumb-item">
-              <div class="thumb"></div>
-              <div class="thumb-meta"><span class="no">No.03</span><span>待补</span></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="aigc-panel" data-panel="1">
-          <p class="aigc-sub">✅ <b>短视频 AI 量产</b> · 打通脚本 / 分镜 / 画面 / 剪辑，实现工业化量产</p>
-          <div class="aigc-gallery">
-            <div class="thumb-item"><div class="thumb video"></div><div class="thumb-meta"><span class="no">No.01</span><span>Runway Gen-3</span></div></div>
-            <div class="thumb-item"><div class="thumb video"></div><div class="thumb-meta"><span class="no">No.02</span><span>可灵</span></div></div>
-            <div class="thumb-item"><div class="thumb video"></div><div class="thumb-meta"><span class="no">No.03</span><span>Sora</span></div></div>
-          </div>
-        </div>
-
-        <div class="aigc-panel" data-panel="2">
-          <p class="aigc-sub">✅ <b>自动化工作流搭建</b> · ComfyUI 自动化，把非标创意转化为标准化生产工具</p>
-          <div class="wf-list">
-            <div class="wf-item"><div class="wf-no">// WORKFLOW 01</div><div class="wf-title">角色一致性工作流</div><div class="wf-desc">ComfyUI + IPAdapter + Reactor，保证同一角色在不同场景下的一致性。</div></div>
-            <div class="wf-item"><div class="wf-no">// WORKFLOW 02</div><div class="wf-title">电商图批量生成</div><div class="wf-desc">上传白底图自动出 6 种风格场景图，单次 ≈ 30 秒。</div></div>
-            <div class="wf-item"><div class="wf-no">// WORKFLOW 03</div><div class="wf-title">图生视频流水线</div><div class="wf-desc">脚本 → 分镜 → 可灵 → 自动拼接配乐，出片速度 10 倍于人工。</div></div>
-            <div class="wf-item"><div class="wf-no">// WORKFLOW 04</div><div class="wf-title">多语言海报生成</div><div class="wf-desc">一套 prompt 同时出中/英/日海报。</div></div>
-          </div>
-        </div>
+        <!-- 4 颗橙子：单独 PNG + 文字标签，位置按 Figma 每个 group 的百分比 -->
+        <a class="ptree-orange ip" href="javascript:void(0)" data-kind="ip"
+           aria-label="IP 全链路创作">
+          <img src="./images/portfolio/ip.png" alt="" />
+          <span class="ptree-label">IP</span>
+        </a>
+        <a class="ptree-orange chuangzuo" href="javascript:void(0)" data-kind="visual"
+           data-peel="./images/oranges/ocean-peel-long.png" aria-label="海报创作">
+          <img src="./images/portfolio/chuangzuo.png" alt="" />
+          <span class="ptree-label">海报</span>
+        </a>
+        <a class="ptree-orange shipin" href="javascript:void(0)" data-kind="video"
+           data-peel="./images/oranges/grasslan-peel-long.png" aria-label="AI 短视频">
+          <img src="./images/portfolio/shipin.png" alt="" />
+          <span class="ptree-label">AI视频</span>
+        </a>
+        <a class="ptree-orange gongzuoliu" href="javascript:void(0)" data-kind="workflow"
+           aria-label="自动化工作流">
+          <img src="./images/portfolio/gongzuoliu.png" alt="" />
+          <span class="ptree-label">工作流</span>
+        </a>
       </div>
+    </section>
 
-      <!-- P5 波浪 canvas 容器 -->
-      <div class="aigc-canvas" id="aigc-canvas"></div>
+    <section class="portfolio-cta">
+      <h1 class="tap-hint">
+        <span class="tap-line-1">这是一棵能结出创意果实的橙子树</span>
+        <span class="tap-line-2">你可以拖动橙子，也可以点击橙子</span>
+      </h1>
     </section>
   </main>
 
-  <!-- 点图放大弹窗 -->
-  <div class="img-modal" id="imgModal"><img id="imgModalSrc" alt="" /></div>
-
   <footer>
-    <div class="footer-inner code">
-      <div class="footer-item"><b>Email</b><span>your@email.com</span></div>
-      <div class="footer-item"><b>Rednote</b><span class="cn-serif">@陈彤</span></div>
-      <div class="footer-item"><b>Douyin</b><span>@陈彤</span></div>
-      <div class="footer-item"><b>Rights</b><span>Made with ink &amp; algorithms · 2026</span></div>
+    <div class="footer-inner">
+      <div class="footer-item">
+        <img class="footer-icon" src="./images/UI_new/Email.png" alt="Email" />
+        <a href="mailto:494885025@qq.com">494885025@qq.com</a>
+      </div>
+      <div class="footer-item">
+        <img class="footer-icon" src="./images/UI_new/Rednote.png" alt="Rednote" />
+        <a href="https://www.xiaohongshu.com/user/profile/608949a9000000000101de95?xsec_token=ABeM8Un3uuypA7dOGqYhXfcfPrAej8FT4cInKEH543rTo%3D&amp;xsec_source=pc_search" target="_blank" rel="noopener">一只橙橙子</a>
+      </div>
+      <div class="footer-item">
+        <img class="footer-icon" src="./images/UI_new/Linkedin.png" alt="LinkedIn" />
+        <a href="https://www.linkedin.com/in/tongchen00/" target="_blank" rel="noopener">www.linkedin.com/in/tongchen00/</a>
+      </div>
+      <div class="footer-item">
+        <img class="footer-icon" src="./images/UI_new/Rights.png" alt="Rights" />
+        <span>Growing ideas, one orange at a time.</span>
+      </div>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
-  <script>
-    // ========== Wave 导航（点击切换作品分类） ==========
-    const BG = [242, 242, 241];
-    const LABELS = [
-      { label: '商业视觉创作', idx: 0 },
-      { label: '短视频AI量产', idx: 1 },
-      { label: '自动化工作流',  idx: 2 }
-    ];
-    const config = {
-      topBoundary: 60, riseSpeed: 0.1,
-      lineGapInitial: 60, lineGapCompressed: 44,
-      paddingBottom: 50, trailDensity: 12,
-      waveCurvature: 2, textGapRatio: 1.4, closingSpeed: 0.15
-    };
-    let waves = [];
-    let activeWaveIdx = -1;
-    let hasBeenClicked = false;
-    let scaleFactor = 1;
-    let cw = 0, ch = 0;
-    let hostEl = null;
+  <!-- 全屏弹窗（IP + 工作流共用骨架） -->
+  <div class="fs-modal" id="fsModal" aria-hidden="true">
+    <button class="fs-close code" id="fsClose" aria-label="Close">CLOSE ×</button>
+    <div class="fs-modal-inner" id="fsContent"></div>
+  </div>
 
-    window.setup = function(){
-      hostEl = document.getElementById('aigc-canvas');
-      cw = hostEl.clientWidth;
-      ch = hostEl.clientHeight;
-      const c = createCanvas(cw, ch);
-      c.parent('aigc-canvas');
-      c.elt.style.display = 'block';
-      noFill();
-      textFont('Special Elite');
-      scaleFactor = Math.max(0.8, Math.min(1.2, cw / 1280));
-      placeWavesInitial();
-    };
+  <!-- 皮 + 海报/视频横向展示（视频用） -->
+  <div class="peel-board" id="peelBoard" aria-hidden="true"></div>
+  <button class="peel-close code" id="peelClose" aria-label="Close">BACK ←</button>
 
-    function placeWavesInitial(){
-      waves = [];
-      const gap = config.lineGapInitial;
-      const last = ch - config.paddingBottom * scaleFactor;
-      const first = last - 2 * gap * scaleFactor;
-      for(let i=0; i < LABELS.length; i++){
-        textSize(18 * scaleFactor);
-        const tw = textWidth(LABELS[i].label) * config.textGapRatio;
-        const y = first + i * gap * scaleFactor;
-        waves.push(new Wave(y, LABELS[i].label, i, tw));
-      }
-    }
+  <!-- 创作橙子：拖动生长树枝 + 7 张海报随枝条出现 -->
+  <div class="branch-stage" id="branchStage">
+    <img class="branch-svg" id="branchSvg" src="./images/portfolio/branch.svg" alt="" />
+    <div class="branch-posters">
+      <a class="bp" style="--x:7.14%"  data-n="1" data-src="./images/works/posters/p01.png" href="javascript:void(0)"></a>
+      <a class="bp" style="--x:21.43%" data-n="2" data-src="./images/works/posters/p02.png" href="javascript:void(0)"></a>
+      <a class="bp" style="--x:35.71%" data-n="3" data-src="./images/works/posters/p03.png" href="javascript:void(0)"></a>
+      <a class="bp" style="--x:50.00%" data-n="4" data-src="./images/works/posters/p04.png" href="javascript:void(0)"></a>
+      <a class="bp" style="--x:64.29%" data-n="5" data-src="./images/works/posters/p05.png" href="javascript:void(0)"></a>
+      <a class="bp" style="--x:78.57%" data-n="6" data-src="./images/works/posters/p06.png" href="javascript:void(0)"></a>
+      <a class="bp" style="--x:92.86%" data-n="7" data-src="./images/works/posters/p07.png" href="javascript:void(0)"></a>
+    </div>
+  </div>
 
-    window.windowResized = function(){
-      cw = hostEl.clientWidth;
-      ch = hostEl.clientHeight;
-      resizeCanvas(cw, ch);
-      scaleFactor = Math.max(0.8, Math.min(1.2, cw / 1280));
-      for(let i=0;i<waves.length;i++){
-        waves[i].centerX = [cw*0.22, cw*0.5, cw*0.78][i];
-      }
-      updateTargets();
-    };
-    function updateTargets(){
-      const gap = hasBeenClicked ? config.lineGapCompressed : config.lineGapInitial;
-      const last = ch - config.paddingBottom * scaleFactor;
-      const first = last - 2 * gap * scaleFactor;
-      for(let i=0;i<waves.length;i++){
-        waves[i].homeY = first + i * gap * scaleFactor;
-      }
-    }
-    window.draw = function(){
-      clear();
-      for(const w of waves){ w.update(); w.display(); }
-      // hover 变指针
-      let hov = false;
-      for(const w of waves){
-        if(Math.abs(mouseY - w.currentY) < 24 * scaleFactor && w.displayOpacity > 50){ hov = true; break; }
-      }
-      document.body.style.cursor = hov ? 'pointer' : '';
-    };
-    window.mousePressed = function(){
-      if(mouseX < 0 || mouseX > cw || mouseY < 0 || mouseY > ch) return;
-      for(const w of waves) w.checkClick(mouseX, mouseY);
-    };
+  <!-- 视频橙子：拖动生长树枝 + 6 个视频随枝条出现 -->
+  <div class="branch-stage branch-stage-video" id="branchStageVideo">
+    <img class="branch-svg" id="branchSvgVideo" src="./images/portfolio/branch.svg" alt="" />
+    <div class="branch-posters">
+      <div class="bv" style="--x:8.33%"  data-n="1" data-src="./images/works/videos/v01.mp4">
+        <a class="bv-player" href="javascript:void(0)"></a>
+        <span class="bv-label">美妆个护</span>
+      </div>
+      <div class="bv" style="--x:25.00%" data-n="2" data-src="./images/works/videos/v02.mp4">
+        <a class="bv-player" href="javascript:void(0)"></a>
+        <span class="bv-label">箱包配饰</span>
+      </div>
+      <div class="bv" style="--x:41.67%" data-n="3" data-src="./images/works/videos/v03.mp4">
+        <a class="bv-player" href="javascript:void(0)"></a>
+        <span class="bv-label">服装服饰</span>
+      </div>
+      <div class="bv" style="--x:58.33%" data-n="4" data-src="./images/works/videos/v04.mp4">
+        <a class="bv-player" href="javascript:void(0)"></a>
+        <span class="bv-label">美食餐饮</span>
+      </div>
+      <div class="bv" style="--x:75.00%" data-n="5" data-src="./images/works/videos/v05.mp4">
+        <a class="bv-player" href="javascript:void(0)"></a>
+        <span class="bv-label">智能制造</span>
+      </div>
+      <div class="bv" style="--x:91.67%" data-n="6" data-src="./images/works/videos/v06.mp4">
+        <a class="bv-player" href="javascript:void(0)"></a>
+        <span class="bv-label">天马行空</span>
+      </div>
+    </div>
+  </div>
 
-    function switchPanel(idx){
-      document.querySelectorAll('.aigc-panel').forEach(p=>{
-        p.classList.toggle('visible', Number(p.dataset.panel) === idx);
-      });
-    }
+  <!-- 视频播放弹窗（点击视频卡打开） -->
+  <div class="video-modal" id="videoModal" aria-hidden="true">
+    <button class="video-modal-close code" id="videoModalClose" aria-label="Close">CLOSE ×</button>
+    <video class="video-modal-player" id="videoModalPlayer" controls playsinline></video>
+  </div>
 
-    class Wave{
-      constructor(y, txt, id, fw){
-        this.homeY = y; this.currentY = y; this.txt = txt; this.id = id;
-        this.state = 'IDLE'; this.displayOpacity = 255;
-        this.textBaseWidth = fw; this.currentTextScale = 1.0;
-        this.waterTrails = []; this.noiseSeed = random(1000);
-        this.centerX = [cw*0.22, cw*0.5, cw*0.78][id];
-      }
-      update(){
-        if(activeWaveIdx !== -1 && activeWaveIdx !== this.id)
-          this.displayOpacity = lerp(this.displayOpacity, 0, 0.15);
-        else
-          this.displayOpacity = lerp(this.displayOpacity, 255, 0.1);
-
-        if(this.state === 'RISING'){
-          this.currentY = lerp(this.currentY, config.topBoundary * scaleFactor, config.riseSpeed);
-          this.currentTextScale = lerp(this.currentTextScale, 0, config.closingSpeed);
-          this.generateTrails();
-          if(this.currentY <= config.topBoundary * scaleFactor + 2){
-            this.state = 'FALLING';
-            hasBeenClicked = true;
-            updateTargets();
-            switchPanel(this.id);   // ← 关键：切换到对应内容面板
-          }
-        } else if(this.state === 'FALLING'){
-          this.currentY = lerp(this.currentY, this.homeY, 0.08);
-          if(this.currentY > this.homeY - 150 * scaleFactor)
-            this.currentTextScale = lerp(this.currentTextScale, 1.0, 0.08);
-          if(Math.abs(this.currentY - this.homeY) < 1.0){
-            this.currentY = this.homeY;
-            this.state = 'IDLE';
-            activeWaveIdx = -1;
-          }
-        } else {
-          this.currentY = lerp(this.currentY, this.homeY, 0.1);
-          this.currentTextScale = lerp(this.currentTextScale, 1.0, 0.1);
-        }
-        for(let i=this.waterTrails.length-1;i>=0;i--){
-          const t = this.waterTrails[i];
-          t.y += t.speed * scaleFactor;
-          t.opacity -= 3;
-          if(t.opacity <= 0) this.waterTrails.splice(i,1);
-        }
-      }
-      display(){
-        if(this.displayOpacity < 5) return;
-        push();
-        for(const t of this.waterTrails){
-          stroke(120,130,140, t.opacity*(this.displayOpacity/255));
-          strokeWeight(t.thickness * scaleFactor);
-          line(t.x, t.y, t.x, t.y + t.len * scaleFactor);
-        }
-        for(let i=0;i<2;i++){
-          const yOff = i * 4 * scaleFactor;
-          const a = i === 0 ? 255 : 80;
-          stroke(0, a*(this.displayOpacity/255));
-          strokeWeight(i===0 ? 1.5*scaleFactor : 0.8*scaleFactor);
-          noFill();
-          this.drawLine(yOff);
-        }
-        const gapW = this.textBaseWidth * this.currentTextScale;
-        if(gapW > 0.5){
-          noStroke();
-          fill(BG[0], BG[1], BG[2]);
-          rectMode(CENTER);
-          rect(this.centerX, this.currentY + 2*scaleFactor, gapW, 22*scaleFactor);
-        }
-        if(this.currentTextScale > 0.02){
-          push();
-          translate(this.centerX, this.currentY + 2*scaleFactor);
-          scale(this.currentTextScale, 1.0);
-          noStroke();
-          fill(0, this.displayOpacity * Math.pow(this.currentTextScale, 1.5));
-          textAlign(CENTER, CENTER);
-          textSize(18*scaleFactor);
-          text(this.txt, 0, 0);
-          pop();
-        }
-        pop();
-      }
-      drawLine(yOff){
-        beginShape();
-        const gh = (this.textBaseWidth * this.currentTextScale) / 2;
-        curveVertex(-20, this.currentY + yOff);
-        for(let x = 0; x <= cw; x += 15*scaleFactor){
-          const nx = x * 0.004 / scaleFactor;
-          const nv = noise(nx, this.noiseSeed + yOff);
-          const bm = map(nv, 0, 1, -25, 25) * config.waveCurvature * scaleFactor;
-          const dc = Math.abs(x - this.centerX);
-          let taper = map(dc, gh*0.5, gh*1.5, 0, 1, true);
-          if(this.currentTextScale < 0.1) taper = 1;
-          curveVertex(x, this.currentY + yOff + bm * taper);
-        }
-        curveVertex(cw + 20, this.currentY + yOff);
-        endShape();
-      }
-      generateTrails(){
-        for(let i=0;i<config.trailDensity;i++){
-          const rx = random(0, cw);
-          const gh = (this.textBaseWidth * this.currentTextScale)/2;
-          if(rx > this.centerX - gh && rx < this.centerX + gh) continue;
-          this.waterTrails.push({
-            x: rx, y: this.currentY + random(-5,5)*scaleFactor,
-            len: random(30,80), speed: random(4,8),
-            thickness: random(0.5,1.8), opacity: random(100,200)
-          });
-        }
-      }
-      checkClick(mx, my){
-        if(activeWaveIdx === -1 && Math.abs(my - this.currentY) < 32 * scaleFactor){
-          this.state = 'RISING';
-          activeWaveIdx = this.id;
-          for(let i=0;i<60;i++) this.generateTrails();
-        }
-      }
-    }
-  </script>
+  <!-- 海报点击放大 -->
+  <div class="img-modal" id="imgModal">
+    <img id="imgModalSrc" alt="" />
+  </div>
 
   <script>
-    // 图片点击放大
-    const modal = document.getElementById('imgModal');
-    const modalImg = document.getElementById('imgModalSrc');
-    document.querySelectorAll('.thumb[data-full]').forEach(el=>{
-      el.addEventListener('click', ()=>{
-        modalImg.src = el.dataset.full;
-        modal.classList.add('active');
+    // ======= 双行中文提示字符级入场动画 =======
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.tap-line-1, .tap-line-2').forEach(el => {
+        const text = el.textContent;
+        let html = '';
+        for(let i=0;i<text.length;i++){
+          const ch = text[i];
+          const delay = 0.2 + Math.random()*0.6 + i*0.02;
+          html += `<span class="char" style="animation-delay:${delay}s">${ch}</span>`;
+        }
+        el.innerHTML = html;
       });
     });
-    modal.addEventListener('click', ()=> modal.classList.remove('active'));
+
+    // ======= Element refs =======
+    const oranges     = document.querySelectorAll('.ptree-orange');
+    const peelBoard   = document.getElementById('peelBoard');
+    const peelClose   = document.getElementById('peelClose');
+    const fsModal     = document.getElementById('fsModal');
+    const fsContent   = document.getElementById('fsContent');
+    const fsClose     = document.getElementById('fsClose');
+    const imgModal    = document.getElementById('imgModal');
+    const imgModalSrc = document.getElementById('imgModalSrc');
+
+    const chuangzuo   = document.querySelector('.ptree-orange.chuangzuo');
+    const shipin      = document.querySelector('.ptree-orange.shipin');
+
+    // ======= 设置海报背景图（创作用）=======
+    document.querySelectorAll('.bp').forEach(p => {
+      if (p.dataset.src) p.style.backgroundImage = `url('${p.dataset.src}')`;
+    });
+    // ======= 设置视频封面（AI视频 6 个 + step03 2 个，统一处理）=======
+    document.querySelectorAll('.bv').forEach(v => {
+      const n = v.dataset.n;
+      if (n) {
+        const player = v.querySelector('.bv-player');
+        if (player) player.style.backgroundImage = `url('./images/works/videos/v0${n}-cover.jpg')`;
+      }
+    });
+    document.querySelectorAll('.bv-player[data-cover]').forEach(p => {
+      p.style.backgroundImage = `url('${p.dataset.cover}')`;
+    });
+
+    // ======= Orange click 分流（创作/视频走拖拽，其它走 click） =======
+    oranges.forEach(o => {
+      const kind = o.dataset.kind;
+      if (kind === 'visual' || kind === 'video') return;   // drag 独立处理
+      o.addEventListener('click', e => {
+        e.preventDefault();
+        if (kind === 'ip' || kind === 'workflow') {
+          openFullscreen(kind);
+        } else {
+          openPeel(kind, o.dataset.peel);
+        }
+      });
+    });
+
+    // ======= 拖拽生长工厂：两颗橙子共用 =======
+    const dragInstances = [];     // 用来做互斥：拖一颗时另一颗自动收回
+
+    function initDrag(orange, branchStage, branchSvg, items){
+      if (!orange || !branchStage) return;
+      let progress = 0, dragging = false, didDrag = false, dragStartX = 0, baseProgress = 0, MAX_DRAG = 700;
+      let rafId = null;
+
+      function position(){
+        const rect = orange.getBoundingClientRect();
+        const ps = document.querySelector('.portfolio-stage').getBoundingClientRect();
+        // 起点：Figma 实测的 (52.5%, 13.1%) 偏移位置（橙子挂柄）
+        const left  = rect.left + rect.width * 0.525 - ps.left;
+        const top   = rect.top  + rect.height * 0.131 - ps.top;
+        const width = window.innerWidth - (rect.left + rect.width * 0.525) - 30;
+        branchStage.style.left  = left + 'px';
+        branchStage.style.top   = top + 'px';
+        branchStage.style.width = width + 'px';
+        MAX_DRAG = Math.max(280, width - 60);
+        render();
+      }
+
+      function render(){
+        orange.style.transform = `translateX(${progress * MAX_DRAG}px)`;
+        branchSvg.style.clipPath = `inset(0 ${(1 - progress) * 100}% 0 0)`;
+        items.forEach((it, i) => {
+          const threshold = (i + 0.5) / items.length;
+          it.classList.toggle('revealed', progress >= threshold);
+        });
+        // 只要有任一橙子进度 > 0.02 就标记为 pulled（给 CSS 做 tap-hint 隐藏用）
+        branchStage.classList.toggle('branch-active', progress > 0.02);
+      }
+
+      // 平滑收回：progress 从当前值缓动到 0（ease-out-cubic, 350ms）
+      function collapse(){
+        if (dragging) return;
+        if (progress < 0.01) return;
+        if (rafId) cancelAnimationFrame(rafId);
+        orange.classList.add('collapsing');
+        const startP = progress;
+        const t0 = performance.now();
+        (function step(t){
+          if (dragging) { orange.classList.remove('collapsing'); rafId = null; return; }
+          const k = Math.min(1, ((t || performance.now()) - t0) / 350);
+          const eased = 1 - Math.pow(1 - k, 3);
+          progress = startP * (1 - eased);
+          render();
+          if (k < 1) rafId = requestAnimationFrame(step);
+          else { orange.classList.remove('collapsing'); rafId = null; }
+        })(t0);
+      }
+
+      orange.addEventListener('pointerdown', e => {
+        e.preventDefault();
+        // 先取消自己的收回动画（如果有）
+        if (rafId) { cancelAnimationFrame(rafId); rafId = null; orange.classList.remove('collapsing'); }
+        // 收回其它橙子（互斥：避免重叠）
+        dragInstances.forEach(inst => { if (inst.orange !== orange) inst.collapse(); });
+
+        dragging = true;
+        didDrag = false;
+        dragStartX = e.clientX;
+        baseProgress = progress;
+        try { orange.setPointerCapture(e.pointerId); } catch(_){}
+        orange.classList.add('dragging');
+        document.body.classList.add('is-dragging');
+      });
+
+      window.addEventListener('pointermove', e => {
+        if (!dragging) return;
+        const deltaX = e.clientX - dragStartX;
+        if (Math.abs(deltaX) > 5) didDrag = true;
+        progress = Math.max(0, Math.min(1, baseProgress + deltaX / MAX_DRAG));
+        render();
+      });
+
+      window.addEventListener('pointerup', () => {
+        if (!dragging) return;
+        dragging = false;
+        orange.classList.remove('dragging');
+        document.body.classList.remove('is-dragging');
+        // 没有发生拖动（即点击）→ 缓动展开到全部
+        if (!didDrag) {
+          if (rafId) cancelAnimationFrame(rafId);
+          const startP = progress;
+          const target = 1;
+          const t0 = performance.now();
+          (function step(t){
+            if (dragging) { rafId = null; return; }
+            const k = Math.min(1, ((t || performance.now()) - t0) / 600);
+            const eased = 1 - Math.pow(1 - k, 3);
+            progress = startP + (target - startP) * eased;
+            render();
+            if (k < 1) rafId = requestAnimationFrame(step);
+            else rafId = null;
+          })(t0);
+        }
+      });
+
+      const instance = { orange, position, render, collapse };
+      dragInstances.push(instance);
+      return instance;
+    }
+
+    // 两颗橙子各自初始化
+    const dragC = initDrag(chuangzuo,
+      document.getElementById('branchStage'),
+      document.getElementById('branchSvg'),
+      document.querySelectorAll('.bp'));
+    const dragV = initDrag(shipin,
+      document.getElementById('branchStageVideo'),
+      document.getElementById('branchSvgVideo'),
+      document.querySelectorAll('.bv'));
+
+    function positionAll(){ dragC && dragC.position(); dragV && dragV.position(); }
+    window.addEventListener('resize', positionAll);
+    window.addEventListener('load',  positionAll);
+    document.querySelector('.ptree').addEventListener('load', positionAll);
+    setTimeout(positionAll, 200);
+
+    // 海报点击放大
+    document.querySelectorAll('.bp').forEach(p => {
+      p.addEventListener('click', e => {
+        e.preventDefault();
+        e.stopPropagation();
+        imgModalSrc.src = p.dataset.src;
+        imgModal.classList.add('active');
+      });
+    });
+
+    // 视频点击：弹出视频播放 modal
+    const videoModal       = document.getElementById('videoModal');
+    const videoModalPlayer = document.getElementById('videoModalPlayer');
+    const videoModalClose  = document.getElementById('videoModalClose');
+
+    function openVideo(src){
+      if (!src) { alert('视频还没放上去，等我把 v0X.mp4 上传后再点 🍊'); return; }
+      videoModalPlayer.src = src;
+      videoModal.classList.add('active');
+      videoModal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+      setTimeout(() => { videoModalPlayer.play().catch(()=>{}); }, 250);
+    }
+    function closeVideo(){
+      videoModalPlayer.pause();
+      videoModalPlayer.currentTime = 0;
+      videoModalPlayer.removeAttribute('src');
+      videoModalPlayer.load();
+      videoModal.classList.remove('active');
+      videoModal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+    }
+    videoModalClose.addEventListener('click', closeVideo);
+    videoModal.addEventListener('click', e => {
+      if (e.target === videoModal) closeVideo();
+    });
+
+    document.querySelectorAll('.bv-player').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        e.stopPropagation();
+        const wrap = btn.closest('.bv');
+        const src = btn.dataset.src || (wrap && wrap.dataset.src);
+        openVideo(src);
+      });
+    });
+
+    // ======= 皮 + 海报/视频 横向展示 =======
+    function openPeel(kind, peelSrc){
+      const count  = kind === 'visual' ? 5 : 6;
+      const isVideo = kind === 'video';
+
+      let items = '';
+      for(let i = 1; i <= count; i++){
+        const playIcon = isVideo ? '<div class="peel-play">▶</div>' : '';
+        items += `
+          <div class="peel-item ${isVideo ? 'is-video' : ''}" data-n="${i}" style="animation-delay:${0.1 + i*0.1}s">
+            <div class="peel-thumb">
+              ${playIcon}
+              <span class="peel-no">No.${String(i).padStart(2,'0')}</span>
+            </div>
+            <div class="peel-cap">${isVideo ? '视频' : '海报'} ${i}</div>
+          </div>
+        `;
+      }
+
+      peelBoard.innerHTML = `
+        ${peelSrc ? `<img class="peel-long" src="${peelSrc}" alt="" aria-hidden="true" />` : ''}
+        <div class="peel-items">${items}</div>
+      `;
+
+      peelBoard.classList.add('active');
+      peelBoard.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+
+      peelBoard.querySelectorAll('.peel-item').forEach(el => {
+        el.addEventListener('click', () => {
+          if (isVideo) {
+            alert('视频播放（占位）\nNo.' + el.dataset.n);
+          } else {
+            imgModalSrc.src = makePlaceholderPoster(el.dataset.n);
+            imgModal.classList.add('active');
+          }
+        });
+      });
+    }
+
+    function closePeel(){
+      peelBoard.classList.remove('active');
+      peelBoard.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+      setTimeout(() => { peelBoard.innerHTML = ''; }, 500);
+    }
+    peelClose.addEventListener('click', closePeel);
+
+    // ======= 全屏弹窗 (IP + 工作流) =======
+    function openFullscreen(kind){
+      // 打开前先收回任何拖出的橙子（创作 / 视频），回到 Portfolio 主页状态
+      dragInstances.forEach(inst => inst.collapse());
+      fsContent.innerHTML = kind === 'ip' ? renderIP() : renderWorkflow();
+      fsModal.classList.add('active');
+      fsModal.scrollTop = 0;
+      fsModal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+
+      // 弹窗内动态生成的视频卡：设置封面 + 绑点击播放
+      fsContent.querySelectorAll('.bv-player[data-cover]').forEach(p => {
+        p.style.backgroundImage = `url('${p.dataset.cover}')`;
+      });
+      fsContent.querySelectorAll('.bv-player').forEach(btn => {
+        btn.addEventListener('click', e => {
+          e.preventDefault();
+          e.stopPropagation();
+          openVideo(btn.dataset.src);
+        });
+      });
+      fsContent.querySelectorAll('.ip-shot').forEach(shot => {
+        shot.addEventListener('click', e => {
+          e.preventDefault();
+          e.stopPropagation();
+          imgModalSrc.src = shot.dataset.src;
+          imgModal.classList.add('active');
+        });
+      });
+    }
+    function closeFullscreen(){
+      // 同时关掉嵌套打开的图片放大弹窗 / 视频弹窗，避免回到主页面后还残留
+      if (imgModal.classList.contains('active')) closeImgModal();
+      if (videoModal.classList.contains('active')) closeVideo();
+      fsModal.classList.remove('active');
+      fsModal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+      setTimeout(() => { fsContent.innerHTML = ''; }, 500);
+    }
+    fsClose.addEventListener('click', closeFullscreen);
+
+    // ======= ESC + 背景点击关闭 =======
+    document.addEventListener('keydown', e => {
+      if (e.key !== 'Escape') return;
+      if (videoModal.classList.contains('active')) closeVideo();
+      else if (imgModal.classList.contains('active')) closeImgModal();
+      else if (fsModal.classList.contains('active')) closeFullscreen();
+      else if (peelBoard.classList.contains('active')) closePeel();
+    });
+    imgModal.addEventListener('click', closeImgModal);
+    function closeImgModal(){
+      imgModal.classList.remove('active');
+      setTimeout(() => { imgModalSrc.src = ''; }, 300);
+    }
+
+    // ======= 占位海报 =======
+    function makePlaceholderPoster(n){
+      const svg = `
+        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 1600' width='900' height='1600'>
+          <defs>
+            <linearGradient id='g' x1='0' y1='0' x2='0' y2='1'>
+              <stop offset='0' stop-color='#fff5ec'/>
+              <stop offset='1' stop-color='#ffe6c7'/>
+            </linearGradient>
+          </defs>
+          <rect width='900' height='1600' fill='url(%23g)'/>
+          <text x='450' y='300' text-anchor='middle' font-family='Special Elite' font-size='80' fill='%23f29a4a'>POSTER ${n}</text>
+          <text x='450' y='400' text-anchor='middle' font-family='Source Code Pro' font-size='24' fill='%23999'>9:16 · 占位长图</text>
+        </svg>
+      `;
+      return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+    }
+
+    // ======= IP 时间线内容 =======
+    function renderIP(){
+      return `
+        <h1 class="fs-title">IP 角色设计</h1>
+        <p class="fs-subtitle">
+          <strong>项目背景：</strong>基于公司现有吉祥物小猫 Data，打造专属 3D 拟人化角色，用于运营 AI 技术科普官方账号。<br/><br/>
+          <strong>核心目标：</strong>保留品牌原生识别度的同时，赋予角色科技感与亲和力，适配短视频平台传播特性。
+        </p>
+        <div class="timeline">
+          <div class="timeline-node">
+            <div class="timeline-step">STEP 01 · 设计</div>
+            <div class="timeline-h">AI 辅助概念生成</div>
+            <div class="timeline-body">
+              <p><strong>输入：</strong>上传 Data 猫实拍照片 + 手绘手稿（美短花纹、猫耳朵帽子、卷发）</p>
+              <p><strong>生成：</strong>通过精准 Prompt 引导 AI 产出 Q 版拟人风格初稿</p>
+              <p><strong>判断：</strong>AI 生成版本完整保留了品牌核心识别元素，但风格缺乏记忆点，不断细化</p>
+            </div>
+            <img class="timeline-img" src="./images/works/ip/step01-sketch-web.png" alt="参照 · 初稿 · 过程 · 终稿" />
+          </div>
+          <div class="timeline-node">
+            <div class="timeline-step">STEP 02 · 量产</div>
+            <div class="timeline-h">AI 全链路赋能</div>
+            <div class="timeline-body">
+              <p><strong>效率：</strong>基于统一角色基底，一键生成表情、换装、动作、海报、三视图、周边</p>
+              <p><strong>规范：</strong>建立完整 3D 视觉资产库，确保所有物料风格统一</p>
+              <p><strong>交付：</strong>3 天内完成全套运营物料制作，大幅缩短项目周期</p>
+            </div>
+            <div class="step02-media">
+              <img class="media-outfits"  src="./images/works/ip/step02-sketch-web.png" alt="Data 酱换装 & 表情包" />
+              <div class="media-animated-wrap">
+                <img class="media-animated" src="./images/works/ip/data-web.gif" alt="Data 酱动态展示" />
+              </div>
+            </div>
+            <!-- 三视图 + 周边 + 海报 -->
+            <img class="timeline-img step02-extra" src="./images/works/ip/step03-sketch-web.png" alt="Data 酱三视图 & 周边 & 海报" />
+          </div>
+          <div class="timeline-node">
+            <div class="timeline-step">STEP 03 · 上线</div>
+            <div class="timeline-h">从设计到运营</div>
+            <div class="timeline-body">
+              <p><strong>冷启动：</strong>制作头像、封面模板、动态表情包等基础物料</p>
+              <p><strong>内容：</strong>基于 3D 角色产出 AI 科普短视频内容</p>
+              <p><strong>搭建：</strong>首月完成账号基础搭建，进入常态化运营阶段</p>
+            </div>
+            <div class="step03-layout">
+              <div class="step03-left">
+                <a class="step03-avatar-link" href="https://www.xiaohongshu.com/user/profile/68c28c8d0000000019010ef7?xsec_token=ABPSlFaeQjuJcKd2lrpcUtEYLAq_oq2IMIG2usX8Av1II%3D&amp;xsec_source=pc_search" target="_blank" rel="noopener" aria-label="Data 酱小红书主页">
+                  <img class="step03-avatar" src="./images/works/ip/step06-sketch.png" alt="Data 酱头像" />
+                  <span class="step03-hint">点击查看</span>
+                </a>
+                <img class="step03-main" src="./images/works/ip/step05-sketch.png" alt="Data 账号主页" />
+              </div>
+              <div class="step03-right">
+                <div class="step03-videos">
+                  <div class="step03-video">
+                    <a class="bv-player"
+                       data-src="./images/works/videos/ip01.mp4"
+                       data-cover="./images/works/videos/ip04-cover.jpg"
+                       href="javascript:void(0)"></a>
+                    <span class="bv-label">创意</span>
+                  </div>
+                  <div class="step03-video">
+                    <a class="bv-player"
+                       data-src="./images/works/videos/ip02.mp4"
+                       data-cover="./images/works/videos/ip05-cover.jpg"
+                       href="javascript:void(0)"></a>
+                    <span class="bv-label">Vlog</span>
+                  </div>
+                  <div class="step03-video">
+                    <a class="bv-player"
+                       data-src="./images/works/videos/ip03.mp4"
+                       data-cover="./images/works/videos/ip06-cover.jpg"
+                       href="javascript:void(0)"></a>
+                    <span class="bv-label">教程</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-node">
+            <div class="timeline-step">STEP 04 · 成果</div>
+            <div class="timeline-h">两周市场验证</div>
+            <div class="timeline-body">
+              <p><strong>数据：</strong>账号上线 2 周，小红书单条换装视频点赞破 200，直接给账号带来涨粉 200+</p>
+              <p><strong>反馈：</strong>IP 形象获得用户认可，评论区正向互动</p>
+              <p><strong>价值：</strong>完整验证 "AI 辅助 IP 设计 + 内容量产" 模式，为公司后续 AI 内容矩阵提供可复制方法论</p>
+            </div>
+            <div class="ip-shots">
+              <a class="ip-shot" href="javascript:void(0)" data-src="./images/works/ip/shot01.png">
+                <img src="./images/works/ip/shot01.png" alt="数据截图 1" />
+              </a>
+              <a class="ip-shot" href="javascript:void(0)" data-src="./images/works/ip/shot02.jpg">
+                <img src="./images/works/ip/shot02.jpg" alt="数据截图 2" />
+              </a>
+              <a class="ip-shot" href="javascript:void(0)" data-src="./images/works/ip/shot03.png">
+                <img src="./images/works/ip/shot03.png" alt="数据截图 3" />
+              </a>
+              <a class="ip-shot" href="javascript:void(0)" data-src="./images/works/ip/shot04.png">
+                <img src="./images/works/ip/shot04.png" alt="数据截图 4" />
+              </a>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // ======= 工作流占位 =======
+    function renderWorkflow(){
+      return `
+        <h1 class="fs-title">跨行业 AI 内容体系</h1>
+        <p class="fs-tagline">从解决客户痛点，到打造跨行业通用的 AI 生产方法论</p>
+        <p class="fs-subtitle">
+          <strong>项目背景：</strong>针对客户零散用 AI、平台 80% 功能闲置痛点，输出标准化指南 + ComfyUI 工作流，验证跨行业复用性。<br/><br/>
+          <strong>核心目标：</strong>
+        </p>
+        <ul class="fs-targets">
+          <li>零 AI 基础人员 10 分钟上手，内容生产效率提升 3 倍</li>
+          <li>实现从"手动分步操作"到"一键自动化工作流"的升级</li>
+          <li>验证方法论的跨行业通用性，赋能电商、游戏、短剧等全场景</li>
+        </ul>
+        <div class="timeline">
+
+          <div class="timeline-node">
+            <div class="timeline-step">STAGE 01 · 从 0 到 1</div>
+            <div class="timeline-h">标准化交付</div>
+            <div class="timeline-body">
+              <p><strong>问题：</strong>客户只会零散用文生图，80% 平台功能闲置，内容产出效率极低</p>
+              <p><strong>行动：</strong>调研箱包品牌客户的实际需求，梳理出 8 个高频使用场景</p>
+              <p><strong>成果：</strong>测试了平台内所有主流模型的效果，输出了精准的工具选型对照表，编写多个可直接复制的提示词模板，平均提升客户内容产出效率 3 倍。文档已交付给 5 家付费客户使用，平台使用率提升 40%</p>
+            </div>
+
+            <div class="wf-showcase">
+              <div class="wf-board">
+                <img class="wf-b-guide" src="./images/works/workflow/stage01/box-art.png" alt="指南封面" />
+                <div class="wf-b-intro">
+                  <p><strong>项目：</strong>电商包包品类 AI 提示词指南</p>
+                  <p><strong>贡献：</strong>封装复杂操作，提升平台使用率</p>
+                </div>
+
+                <img class="wf-b-bag-1" src="./images/works/workflow/stage01/bag-01.png" alt="" />
+
+                <div class="wf-b-prompt wf-b-pos-change">
+                  <div class="wf-b-card">prompt：更换包包的材质，替换成鳄鱼纹压花材质 / 金属铆钉材质等。</div>
+                  <div class="wf-b-tag">变更材质</div>
+                </div>
+                <img class="wf-b-prod-1" src="./images/works/workflow/stage01/product-01.png" alt="" />
+                <img class="wf-b-prod-2" src="./images/works/workflow/stage01/product-02.png" alt="" />
+                <img class="wf-b-prod-3" src="./images/works/workflow/stage01/product-03.png" alt="" />
+
+                <img class="wf-b-bag-2" src="./images/works/workflow/stage01/bag-01.png" alt="" />
+
+                <img class="wf-b-gen-1" src="./images/works/workflow/stage01/gen-01.png" alt="" />
+                <img class="wf-b-gen-2" src="./images/works/workflow/stage01/gen-02.png" alt="" />
+                <div class="wf-b-prompt wf-b-pos-poster">
+                  <div class="wf-b-card">prompt：生成该包包的商品详情页，突出铆钉材质、时尚美观实用场景，高级简约。</div>
+                  <div class="wf-b-tag">电商海报</div>
+                </div>
+
+                <img class="wf-b-bag-3" src="./images/works/workflow/stage01/bag-01.png" alt="" />
+
+                <div class="wf-b-prompt wf-b-pos-video">
+                  <div class="wf-b-card">按分镜去生成每一分镜的画面。<br/>先文生图，再图生视频。</div>
+                  <div class="wf-b-tag">营销视频</div>
+                </div>
+                <a class="wf-b-video-slot bv-player" data-src="./images/works/workflow/stage01/marketing.mp4" href="javascript:void(0)" aria-label="播放营销视频">
+                  <video class="wf-b-video-preview" src="./images/works/workflow/stage01/marketing.mp4#t=0.1" preload="metadata" muted playsinline></video>
+                </a>
+
+                <div class="wf-b-footnote">（完整文档可在面试时候提供）</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-node">
+            <div class="timeline-step">STAGE 02 · 从 1 到 N</div>
+            <div class="timeline-h">自动化提效</div>
+            <div class="timeline-body">
+              <p><strong>问题：</strong>标准化指南仍需人工分步操作，复制提示词、参数调整、抠图调色、批量导出重复劳动占比高</p>
+              <p><strong>行动：</strong>自学 ComfyUI 节点，拆解传统产品精修流程，将各步独立操作整合为单节点一键工作流</p>
+              <p><strong>成果：</strong>快速批量生成电商主图，工作流成为公司内部标准工具</p>
+            </div>
+
+            <div class="wf-showcase wf-showcase-2">
+              <div class="wf-board wf-board-2">
+                <img class="wf-s2-screenshot" src="./images/works/workflow/stage02/comfy-ui-screenshot.png" alt="ComfyUI 工作界面" />
+                <img class="wf-s2-cy-icon" src="./images/works/workflow/stage02/comfyui-icon.png" alt="" />
+                <div class="wf-s2-cy-text">自学部署<br/>ComfyUI</div>
+                <a class="wf-s2-code-link" href="./images/works/workflow/stage02/comfyui-workflow.json" download="ComfyUI电商精修工作流.json">
+                  <img class="wf-s2-code" src="./images/works/workflow/stage02/code-block.png" alt="" />
+                  <div class="wf-s2-code-text">点击<br/>下载代码</div>
+                </a>
+
+                <div class="wf-s2-intro">
+                  <p><strong>项目：</strong>电商产品精修一键工作流</p>
+                  <p><strong>贡献：</strong>整合多步操作，人工干预减少 80%</p>
+                </div>
+
+                <img class="wf-s2-leaves" src="./images/works/workflow/stage02/leaves.png" alt="" />
+                <img class="wf-s2-photo" src="./images/works/workflow/stage02/phone-photo.png" alt="手机随手拍" />
+                <div class="wf-s2-photo-label">手机随手拍</div>
+
+                <img class="wf-s2-bag-2" src="./images/works/workflow/stage01/bag-01.png" alt="" />
+
+                <img class="wf-s2-graph" src="./images/works/workflow/stage02/workflow-graph.png" alt="ComfyUI 节点图" />
+                <div class="wf-s2-graph-label">搭建工作流</div>
+
+                <img class="wf-s2-prod-1" src="./images/works/workflow/stage02/main-product-1.png" alt="" />
+                <img class="wf-s2-prod-2" src="./images/works/workflow/stage02/main-product-2.png" alt="" />
+                <div class="wf-s2-prod-label">标准电商主图</div>
+
+                <img class="wf-s2-bag-1" src="./images/works/workflow/stage01/bag-01.png" alt="" />
+
+                <img class="wf-s2-poster" src="./images/works/workflow/stage02/creative-poster.png" alt="" />
+                <div class="wf-s2-poster-label">创意海报</div>
+
+                <a class="wf-s2-video bv-player" data-src="./images/works/workflow/stage02/creative-video.mp4" data-cover="./images/works/workflow/stage02/creative-video-cover.png" href="javascript:void(0)" aria-label="播放创意视频"></a>
+                <div class="wf-s2-video-label">创意视频</div>
+
+                <img class="wf-s2-bag-3" src="./images/works/workflow/stage01/bag-01.png" alt="" />
+
+                <div class="wf-s2-flow">
+                  <p><strong>原流程：</strong>专业拍摄 → PS 抠图 → 调色调 → 换背景 → 导出（5 步 / 2 小时）</p>
+                  <p><strong>现流程：</strong>上传原图 → 点击运行（1 步 / 5 分钟）</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-node">
+            <div class="timeline-step">STAGE 03 · 从 N 到 ∞</div>
+            <div class="timeline-h">跨行业复用</div>
+            <div class="timeline-body">
+              <p><strong>问题：</strong>电商方法论局限于单一品类，无法快速迁移至其他行业，不同领域 AI 内容需求差异大</p>
+              <p><strong>行动：</strong>学习 ComfyUI + PS 人机协作模式，解决 AI 生成结构错误痛点，将电商流程复刻至游戏角色设计领域</p>
+              <p><strong>成果：</strong>成功验证方法论的全行业通用性，非原画师也能快速产出合格角色设计</p>
+            </div>
+
+            <div class="wf-showcase wf-showcase-3">
+              <div class="wf-board wf-board-3">
+
+                <img class="wf-s3-graph" src="./images/works/workflow/stage03/ps-comfyui-graph.png" alt="ComfyUI+PS 混合流" />
+                <img class="wf-s3-cy-icon" src="./images/works/workflow/stage02/comfyui-icon.png" alt="" />
+                <img class="wf-s3-ps-icon" src="./images/works/workflow/stage03/ps-icon.png" alt="" />
+                <div class="wf-s3-mix-label">ComfyUI+PS混合流</div>
+
+                <div class="wf-s3-intro">
+                  <p><strong>项目：</strong>零美术基础 AI 角色设计体系</p>
+                  <p><strong>贡献：</strong>ComfyUI+PS 混合流，赋能设计团队</p>
+                </div>
+
+                <img class="wf-s3-char"   src="./images/works/workflow/stage03/char-white.png" alt="" />
+                <img class="wf-s3-size-1" src="./images/works/workflow/stage03/size-1.png" alt="" />
+                <img class="wf-s3-size-2" src="./images/works/workflow/stage03/size-2.png" alt="" />
+                <img class="wf-s3-size-3" src="./images/works/workflow/stage03/size-3.png" alt="" />
+                <img class="wf-s3-size-4" src="./images/works/workflow/stage03/size-4.png" alt="" />
+                <div class="wf-s3-btn wf-s3-btn-size">变更尺寸</div>
+
+                <img class="wf-s3-pose-1" src="./images/works/workflow/stage03/pose-1.png?v=2" alt="" />
+                <img class="wf-s3-pose-2" src="./images/works/workflow/stage03/pose-2.png" alt="" />
+                <div class="wf-s3-btn wf-s3-btn-pose">变更动作</div>
+
+                <img class="wf-s3-outfit-1" src="./images/works/workflow/stage03/outfit-1.png" alt="" />
+                <img class="wf-s3-outfit-2" src="./images/works/workflow/stage03/outfit-2.png" alt="" />
+                <div class="wf-s3-btn wf-s3-btn-outfit">变更服饰</div>
+
+                <img class="wf-s3-lineart" src="./images/works/workflow/stage03/lineart.png" alt="" />
+                <img class="wf-s3-tv-1" src="./images/works/workflow/stage03/three-view-1-4e0c18.png" alt="" />
+                <img class="wf-s3-tv-2" src="./images/works/workflow/stage03/three-view-2-6be605.png" alt="" />
+                <div class="wf-s3-btn wf-s3-btn-color">一键上色</div>
+                <div class="wf-s3-btn wf-s3-btn-views">三视图</div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-node wf-sum">
+            <div class="timeline-step">SUM · 总结</div>
+            <div class="timeline-h">AI 内容生产的认知进化</div>
+            <div class="timeline-body">
+              <p>这三个阶段，其实是我对 AI 内容生产的理解不断深化的过程：</p>
+              <p><strong>第一阶段：</strong>我学会了怎么把 AI 能力变成客户能直接用的交付物</p>
+              <p><strong>第二阶段：</strong>我学会了怎么用技术把交付物变得更自动化、更高效</p>
+              <p><strong>第三阶段：</strong>我学会了怎么把一个行业的成功经验，提炼成可跨行业复制的通用方法论</p>
+              <p style="margin-top:16px;">未来，我希望能继续沿着这条路走下去，用 AI 技术赋能更多普通人，让每个人都能拥有专业的创作能力。</p>
+            </div>
+          </div>
+
+        </div>
+      `;
+    }
   </script>
 </body>
 </html>

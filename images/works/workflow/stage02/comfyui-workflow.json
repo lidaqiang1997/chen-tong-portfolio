@@ -1,0 +1,3076 @@
+{
+  "id": "53e43011-ae0f-4b7c-a36d-effdf3c3e541",
+  "revision": 0,
+  "last_node_id": 46,
+  "last_link_id": 28,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "PreviewImage",
+      "pos": [
+        -575.2596209476139,
+        2327.7401461277327
+      ],
+      "size": [
+        140,
+        246
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 2
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.18.1",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 10,
+      "type": "PreviewImage",
+      "pos": [
+        207.52790171279383,
+        2335.3945849813795
+      ],
+      "size": [
+        140,
+        246
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 4
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.18.1",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 4,
+      "type": "LoadImage",
+      "pos": [
+        -1312.252741487936,
+        2309.5745332048914
+      ],
+      "size": [
+        270,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            1
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.18.1",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "9c4a464eb2083ec6ef9737e3bc4d709b.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "PreviewImage",
+      "pos": [
+        -510.3541433004339,
+        3580.0533332933696
+      ],
+      "size": [
+        140,
+        246
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 6
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.18.1",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 9,
+      "type": "LoadImage",
+      "pos": [
+        -396.672579336054,
+        2323.743318123277
+      ],
+      "size": [
+        270,
+        314
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            3
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.18.1",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "ComfyUI_temp_jimrg_00002_.png",
+        "image"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "MIKA_NebulaGemini",
+      "pos": [
+        -1002.9965053403479,
+        3515.5390196839903
+      ],
+      "size": [
+        400,
+        492
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "参考图像1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 5
+        },
+        {
+          "name": "参考图像2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像6",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像7",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像8",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像9",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像10",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像11",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像12",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像13",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像14",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "图像",
+          "type": "IMAGE",
+          "links": [
+            6
+          ]
+        },
+        {
+          "name": "信息",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "颜色/材质替换",
+      "properties": {
+        "aux_id": "RAFOLIE/comfyui-AFOLIE-API",
+        "ver": "6bc76d55c39c80b7eb1274b589fd70f29568f7a2",
+        "Node name for S&R": "MIKA_NebulaGemini",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "更换包包的材质，替换成金属铆钉材质",
+        "gemini-3-pro-image-preview",
+        "",
+        "3:4",
+        "2K",
+        1,
+        0
+      ]
+    },
+    {
+      "id": 11,
+      "type": "LoadImage",
+      "pos": [
+        -1312.9102393949838,
+        3523.4773247855564
+      ],
+      "size": [
+        270,
+        314
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            5
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.18.1",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "ComfyUI_temp_jimrg_00002_.png",
+        "image"
+      ]
+    },
+    {
+      "id": 19,
+      "type": "LoadImage",
+      "pos": [
+        -1301.9868265301616,
+        2980.1060064600756
+      ],
+      "size": [
+        270,
+        314
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            10
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.18.1",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "ComfyUI_temp_jimrg_00002_.png",
+        "image"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "MIKA_NebulaGemini",
+      "pos": [
+        -1002.2181056358262,
+        2916.9210454520125
+      ],
+      "size": [
+        400,
+        492
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "参考图像1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 10
+        },
+        {
+          "name": "参考图像2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像6",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像7",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像8",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像9",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像10",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像11",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像12",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像13",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像14",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "图像",
+          "type": "IMAGE",
+          "links": [
+            11
+          ]
+        },
+        {
+          "name": "信息",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "变更logo",
+      "properties": {
+        "aux_id": "RAFOLIE/comfyui-AFOLIE-API",
+        "ver": "6bc76d55c39c80b7eb1274b589fd70f29568f7a2",
+        "Node name for S&R": "MIKA_NebulaGemini",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "将包包上的标签logo，变更为刺绣字体「MIKA」",
+        "gemini-3-pro-image-preview",
+        "",
+        "3:4",
+        "2K",
+        1,
+        0
+      ]
+    },
+    {
+      "id": 20,
+      "type": "PreviewImage",
+      "pos": [
+        -568.6840829869751,
+        2947.9973483368203
+      ],
+      "size": [
+        140,
+        246
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 11
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.18.1",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 13,
+      "type": "MIKA_VideoGeneration",
+      "pos": [
+        1072.1663637717402,
+        2261.23873963136
+      ],
+      "size": [
+        400,
+        522
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "输入图像",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 8
+        },
+        {
+          "name": "尾帧图像",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": []
+        },
+        {
+          "name": "info",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "RAFOLIE/comfyui-AFOLIE-API",
+        "ver": "6bc76d55c39c80b7eb1274b589fd70f29568f7a2",
+        "Node name for S&R": "MIKA_VideoGeneration",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "微风徐徐，窗帘随风飘动，墙上的影子也跟着飘动起来",
+        "",
+        "veo-3.1-generate-preview",
+        "提交并等待完成",
+        5,
+        "1080p",
+        "4:3",
+        24,
+        -1,
+        false,
+        false,
+        "allow_all",
+        1,
+        "",
+        "",
+        5,
+        3600
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 17,
+      "type": "MIKA_AdvancedImageGeneration",
+      "pos": [
+        620.2006134789083,
+        2278.0616964961114
+      ],
+      "size": [
+        400,
+        512
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_6",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_7",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_8",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_9",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            8
+          ]
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "RAFOLIE/comfyui-AFOLIE-API",
+        "ver": "6bc76d55c39c80b7eb1274b589fd70f29568f7a2",
+        "Node name for S&R": "MIKA_AdvancedImageGeneration",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "早晨，阳光照进卧室",
+        "",
+        "gemini-3.1-flash-image-preview",
+        1,
+        "4:3",
+        1065658657,
+        "randomize",
+        0.95,
+        "1K",
+        1200,
+        false,
+        "Gemini"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 27,
+      "type": "MIKA_AdvancedImageGeneration",
+      "pos": [
+        1876.2182061402764,
+        2274.291562795587
+      ],
+      "size": [
+        400,
+        512
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_6",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_7",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_8",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_9",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": []
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "RAFOLIE/comfyui-AFOLIE-API",
+        "ver": "6bc76d55c39c80b7eb1274b589fd70f29568f7a2",
+        "Node name for S&R": "MIKA_AdvancedImageGeneration",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "一双手，拉着窗帘",
+        "",
+        "gemini-3.1-flash-image-preview",
+        1,
+        "4:3",
+        96220167,
+        "randomize",
+        0.95,
+        "1K",
+        1200,
+        false,
+        "Gemini"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 24,
+      "type": "MIKA_VideoGeneration",
+      "pos": [
+        2306.328694572425,
+        2270.5561772615442
+      ],
+      "size": [
+        400,
+        522
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "输入图像",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "尾帧图像",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": []
+        },
+        {
+          "name": "info",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "RAFOLIE/comfyui-AFOLIE-API",
+        "ver": "6bc76d55c39c80b7eb1274b589fd70f29568f7a2",
+        "Node name for S&R": "MIKA_VideoGeneration",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "手拉开窗帘",
+        "",
+        "veo-3.1-generate-preview",
+        "提交并等待完成",
+        5,
+        "1080p",
+        "4:3",
+        24,
+        -1,
+        false,
+        false,
+        "allow_all",
+        1,
+        "",
+        "",
+        5,
+        3600
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 22,
+      "type": "MIKA_VideoGeneration",
+      "pos": [
+        1071.7134340337657,
+        2923.0810128417916
+      ],
+      "size": [
+        400,
+        522
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "输入图像",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 12
+        },
+        {
+          "name": "尾帧图像",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": []
+        },
+        {
+          "name": "info",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "RAFOLIE/comfyui-AFOLIE-API",
+        "ver": "6bc76d55c39c80b7eb1274b589fd70f29568f7a2",
+        "Node name for S&R": "MIKA_VideoGeneration",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "女生走向梳妆台",
+        "",
+        "veo-3.1-generate-preview",
+        "提交并等待完成",
+        5,
+        "1080p",
+        "4:3",
+        24,
+        -1,
+        false,
+        false,
+        "allow_all",
+        1,
+        "",
+        "",
+        5,
+        3600
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 32,
+      "type": "MIKA_AdvancedImageGeneration",
+      "pos": [
+        1864.3818425115562,
+        3611.3351855456945
+      ],
+      "size": [
+        400,
+        512
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 28
+        },
+        {
+          "name": "image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_6",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_7",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_8",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_9",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            16
+          ]
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "RAFOLIE/comfyui-AFOLIE-API",
+        "ver": "6bc76d55c39c80b7eb1274b589fd70f29568f7a2",
+        "Node name for S&R": "MIKA_AdvancedImageGeneration",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "从俯拍镜头生成这张图片，并露出包包里的化妆品等",
+        "",
+        "gemini-3.1-flash-image-preview",
+        1,
+        "4:3",
+        367033694,
+        "randomize",
+        0.95,
+        "1K",
+        1200,
+        false,
+        "Gemini"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 33,
+      "type": "MIKA_VideoGeneration",
+      "pos": [
+        2314.0608948410973,
+        3579.555663524709
+      ],
+      "size": [
+        400,
+        522
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "输入图像",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 16
+        },
+        {
+          "name": "尾帧图像",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": []
+        },
+        {
+          "name": "info",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "RAFOLIE/comfyui-AFOLIE-API",
+        "ver": "6bc76d55c39c80b7eb1274b589fd70f29568f7a2",
+        "Node name for S&R": "MIKA_VideoGeneration",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "手在包包里拿出一只口红",
+        "",
+        "veo-3.1-generate-preview",
+        "提交并等待完成",
+        5,
+        "1080p",
+        "4:3",
+        24,
+        -1,
+        false,
+        false,
+        "allow_all",
+        1,
+        "",
+        "",
+        5,
+        3600
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 37,
+      "type": "MIKA_VideoGeneration",
+      "pos": [
+        2320.3973232998314,
+        4279.0822719497155
+      ],
+      "size": [
+        400,
+        522
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "输入图像",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 22
+        },
+        {
+          "name": "尾帧图像",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": []
+        },
+        {
+          "name": "info",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "RAFOLIE/comfyui-AFOLIE-API",
+        "ver": "6bc76d55c39c80b7eb1274b589fd70f29568f7a2",
+        "Node name for S&R": "MIKA_VideoGeneration",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "女生看着镜子，对着镜子涂抹口红，并自信地看着自己",
+        "",
+        "veo-3.1-generate-preview",
+        "提交并等待完成",
+        5,
+        "1080p",
+        "4:3",
+        24,
+        -1,
+        false,
+        false,
+        "allow_all",
+        1,
+        "",
+        "",
+        5,
+        3600
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 39,
+      "type": "MIKA_VideoGeneration",
+      "pos": [
+        1091.041122851738,
+        4931.139167959695
+      ],
+      "size": [
+        400,
+        522
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "输入图像",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 19
+        },
+        {
+          "name": "尾帧图像",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": []
+        },
+        {
+          "name": "info",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "RAFOLIE/comfyui-AFOLIE-API",
+        "ver": "6bc76d55c39c80b7eb1274b589fd70f29568f7a2",
+        "Node name for S&R": "MIKA_VideoGeneration",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "女生背着包包自信地看着镜子里的自己",
+        "",
+        "veo-3.1-generate-preview",
+        "提交并等待完成",
+        5,
+        "1080p",
+        "4:3",
+        24,
+        -1,
+        false,
+        false,
+        "allow_all",
+        1,
+        "",
+        "",
+        5,
+        3600
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 41,
+      "type": "MIKA_VideoGeneration",
+      "pos": [
+        2323.8044588023295,
+        4979.475157737651
+      ],
+      "size": [
+        400,
+        522
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "输入图像",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 20
+        },
+        {
+          "name": "尾帧图像",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": []
+        },
+        {
+          "name": "info",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "RAFOLIE/comfyui-AFOLIE-API",
+        "ver": "6bc76d55c39c80b7eb1274b589fd70f29568f7a2",
+        "Node name for S&R": "MIKA_VideoGeneration",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "模特自信地走出弄堂",
+        "",
+        "veo-3.1-generate-preview",
+        "提交并等待完成",
+        5,
+        "1080p",
+        "4:3",
+        24,
+        -1,
+        false,
+        false,
+        "allow_all",
+        1,
+        "",
+        "",
+        5,
+        3600
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 38,
+      "type": "MIKA_AdvancedImageGeneration",
+      "pos": [
+        655.7557297907343,
+        4944.556008238614
+      ],
+      "size": [
+        400,
+        512
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_6",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_7",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_8",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_9",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            19,
+            23,
+            25
+          ]
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "RAFOLIE/comfyui-AFOLIE-API",
+        "ver": "6bc76d55c39c80b7eb1274b589fd70f29568f7a2",
+        "Node name for S&R": "MIKA_AdvancedImageGeneration",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "左边的女生背着右边的包包照镜子",
+        "",
+        "gemini-3.1-flash-image-preview",
+        1,
+        "4:3",
+        1539340438,
+        "randomize",
+        0.95,
+        "1K",
+        1200,
+        false,
+        "Gemini"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 42,
+      "type": "MIKA_AdvancedImageGeneration",
+      "pos": [
+        1864.2900709411842,
+        5674.877518846963
+      ],
+      "size": [
+        400,
+        512
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 25
+        },
+        {
+          "name": "image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_6",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_7",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_8",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_9",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            24
+          ]
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "RAFOLIE/comfyui-AFOLIE-API",
+        "ver": "6bc76d55c39c80b7eb1274b589fd70f29568f7a2",
+        "Node name for S&R": "MIKA_AdvancedImageGeneration",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "将模特的场景换成弄堂里",
+        "",
+        "gemini-3.1-flash-image-preview",
+        1,
+        "4:3",
+        746994372,
+        "randomize",
+        0.95,
+        "1K",
+        1200,
+        false,
+        "Gemini"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 43,
+      "type": "MIKA_VideoGeneration",
+      "pos": [
+        2316.255821234016,
+        5658.054561982211
+      ],
+      "size": [
+        400,
+        522
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "输入图像",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 24
+        },
+        {
+          "name": "尾帧图像",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": []
+        },
+        {
+          "name": "info",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "RAFOLIE/comfyui-AFOLIE-API",
+        "ver": "6bc76d55c39c80b7eb1274b589fd70f29568f7a2",
+        "Node name for S&R": "MIKA_VideoGeneration",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "模特自信地逛商场",
+        "",
+        "veo-3.1-generate-preview",
+        "提交并等待完成",
+        5,
+        "1080p",
+        "4:3",
+        24,
+        -1,
+        false,
+        false,
+        "allow_all",
+        1,
+        "",
+        "",
+        5,
+        3600
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 21,
+      "type": "MIKA_AdvancedImageGeneration",
+      "pos": [
+        619.7476837409331,
+        2939.9039697065427
+      ],
+      "size": [
+        400,
+        512
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_6",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_7",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_8",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_9",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            12
+          ]
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "RAFOLIE/comfyui-AFOLIE-API",
+        "ver": "6bc76d55c39c80b7eb1274b589fd70f29568f7a2",
+        "Node name for S&R": "MIKA_AdvancedImageGeneration",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "卧室里梳妆台的一角，一位黑色短发穿着黑色连衣裙的模特走向梳妆台",
+        "",
+        "gemini-3.1-flash-image-preview",
+        1,
+        "4:3",
+        457417175,
+        "randomize",
+        0.95,
+        "1K",
+        1200,
+        false,
+        "Gemini"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 29,
+      "type": "MIKA_VideoGeneration",
+      "pos": [
+        2297.927994501269,
+        2926.0262242229596
+      ],
+      "size": [
+        400,
+        522
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "输入图像",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 26
+        },
+        {
+          "name": "尾帧图像",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": []
+        },
+        {
+          "name": "info",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "RAFOLIE/comfyui-AFOLIE-API",
+        "ver": "6bc76d55c39c80b7eb1274b589fd70f29568f7a2",
+        "Node name for S&R": "MIKA_VideoGeneration",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "女生将外套穿好，并整理了一下头发",
+        "",
+        "veo-3.1-generate-preview",
+        "提交并等待完成",
+        5,
+        "1080p",
+        "4:3",
+        24,
+        -1,
+        false,
+        false,
+        "allow_all",
+        1,
+        "",
+        "",
+        5,
+        3600
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 44,
+      "type": "MIKA_AdvancedImageGeneration",
+      "pos": [
+        1853.4010380158006,
+        2932.2471231182712
+      ],
+      "size": [
+        400,
+        512
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_6",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_7",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_8",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_9",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            26
+          ]
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "RAFOLIE/comfyui-AFOLIE-API",
+        "ver": "6bc76d55c39c80b7eb1274b589fd70f29568f7a2",
+        "Node name for S&R": "MIKA_AdvancedImageGeneration",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "切换近景，女生半穿着黑色外套",
+        "",
+        "gemini-3.1-flash-image-preview",
+        1,
+        "4:3",
+        234643066,
+        "randomize",
+        0.95,
+        "1K",
+        1200,
+        false,
+        "Gemini"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 34,
+      "type": "MIKA_AdvancedImageGeneration",
+      "pos": [
+        639.0699131114582,
+        4277.129830344489
+      ],
+      "size": [
+        400,
+        512
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_6",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_7",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_8",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_9",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            17,
+            22
+          ]
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "RAFOLIE/comfyui-AFOLIE-API",
+        "ver": "6bc76d55c39c80b7eb1274b589fd70f29568f7a2",
+        "Node name for S&R": "MIKA_AdvancedImageGeneration",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "短发女生穿着一件黑色西装外套，对着镜子涂口红",
+        "",
+        "gemini-3.1-flash-image-preview",
+        1,
+        "4:3",
+        1951215428,
+        "randomize",
+        0.95,
+        "1K",
+        1200,
+        false,
+        "Gemini"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 46,
+      "type": "MIKA_VideoGeneration",
+      "pos": [
+        1134.898009302931,
+        3569.4902773167323
+      ],
+      "size": [
+        400,
+        522
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "输入图像",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 27
+        },
+        {
+          "name": "尾帧图像",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": []
+        },
+        {
+          "name": "info",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "RAFOLIE/comfyui-AFOLIE-API",
+        "ver": "6bc76d55c39c80b7eb1274b589fd70f29568f7a2",
+        "Node name for S&R": "MIKA_VideoGeneration",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "一只手，打开包包",
+        "",
+        "veo-3.1-generate-preview",
+        "提交并等待完成",
+        5,
+        "4k",
+        "4:3",
+        24,
+        -1,
+        false,
+        false,
+        "allow_all",
+        1,
+        "",
+        "",
+        5,
+        3600
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 45,
+      "type": "MIKA_AdvancedImageGeneration",
+      "pos": [
+        619.6897862151484,
+        3568.3979313350815
+      ],
+      "size": [
+        400,
+        512
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_6",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_7",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_8",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_9",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            27,
+            28
+          ]
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "RAFOLIE/comfyui-AFOLIE-API",
+        "ver": "6bc76d55c39c80b7eb1274b589fd70f29568f7a2",
+        "Node name for S&R": "MIKA_AdvancedImageGeneration",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "【上传包包图片】\n更换背景，将图上的包包放在木质的梳妆台上",
+        "",
+        "gemini-3.1-flash-image-preview",
+        1,
+        "4:3",
+        315704277,
+        "randomize",
+        0.95,
+        "1K",
+        1200,
+        false,
+        "Gemini"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 35,
+      "type": "MIKA_VideoGeneration",
+      "pos": [
+        1088.0707584335125,
+        4264.568174146242
+      ],
+      "size": [
+        400,
+        522
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "输入图像",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 17
+        },
+        {
+          "name": "尾帧图像",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": []
+        },
+        {
+          "name": "info",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "RAFOLIE/comfyui-AFOLIE-API",
+        "ver": "6bc76d55c39c80b7eb1274b589fd70f29568f7a2",
+        "Node name for S&R": "MIKA_VideoGeneration",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "女生低头翻看包包",
+        "",
+        "veo-3.1-generate-preview",
+        "提交并等待完成",
+        5,
+        "4k",
+        "4:3",
+        24,
+        -1,
+        false,
+        false,
+        "allow_all",
+        1,
+        "",
+        "",
+        5,
+        3600
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 40,
+      "type": "MIKA_AdvancedImageGeneration",
+      "pos": [
+        1890.0554831660324,
+        5010.3702579765895
+      ],
+      "size": [
+        400,
+        512
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 23
+        },
+        {
+          "name": "image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_6",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_7",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_8",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "image_9",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            20
+          ]
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "RAFOLIE/comfyui-AFOLIE-API",
+        "ver": "6bc76d55c39c80b7eb1274b589fd70f29568f7a2",
+        "Node name for S&R": "MIKA_AdvancedImageGeneration",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "将模特的场景换成弄堂里",
+        "",
+        "gemini-3.1-flash-image-preview",
+        1,
+        "4:3",
+        102502336,
+        "randomize",
+        0.95,
+        "1K",
+        1200,
+        false,
+        "Gemini"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 3,
+      "type": "MIKA_NebulaGemini",
+      "pos": [
+        -1015.0184579292304,
+        2314.410441587991
+      ],
+      "size": [
+        400,
+        492
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "参考图像1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 1
+        },
+        {
+          "name": "参考图像2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像6",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像7",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像8",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像9",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像10",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像11",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像12",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像13",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "参考图像14",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "图像",
+          "type": "IMAGE",
+          "links": [
+            2
+          ]
+        },
+        {
+          "name": "信息",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "基础精修",
+      "properties": {
+        "aux_id": "RAFOLIE/comfyui-AFOLIE-API",
+        "ver": "6bc76d55c39c80b7eb1274b589fd70f29568f7a2",
+        "Node name for S&R": "MIKA_NebulaGemini",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "商业产品摄影「吉伊卡哇毛绒包包」，置于无边界的纯白背景中。正视图，平视视角。电影级3D渲染，极具立体感的影棚级柔和均匀布光。精准展现材质「爆款软萌风」。产品表面完美无瑕，无指纹、无灰尘。高光与暗部过渡自然，包包光影立体感极强。标签文字排版清晰锐利。极简主义，高级质感,符合顶级电商主图标准，8k分辨率，极致细节。",
+        "gemini-3.1-flash-image-preview",
+        "",
+        "3:4",
+        "2K",
+        1,
+        0
+      ]
+    },
+    {
+      "id": 8,
+      "type": "InspyrenetRembg",
+      "pos": [
+        -103.49505625848582,
+        2336.5047274492495
+      ],
+      "size": [
+        270,
+        78
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            4
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-inspyrenet-rembg",
+        "ver": "1.1.1",
+        "Node name for S&R": "InspyrenetRembg",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "default"
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      4,
+      0,
+      3,
+      0,
+      "IMAGE"
+    ],
+    [
+      2,
+      3,
+      0,
+      2,
+      0,
+      "IMAGE"
+    ],
+    [
+      3,
+      9,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ],
+    [
+      4,
+      8,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      5,
+      11,
+      0,
+      7,
+      0,
+      "IMAGE"
+    ],
+    [
+      6,
+      7,
+      0,
+      12,
+      0,
+      "IMAGE"
+    ],
+    [
+      8,
+      17,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      10,
+      19,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ],
+    [
+      11,
+      6,
+      0,
+      20,
+      0,
+      "IMAGE"
+    ],
+    [
+      12,
+      21,
+      0,
+      22,
+      0,
+      "IMAGE"
+    ],
+    [
+      16,
+      32,
+      0,
+      33,
+      0,
+      "IMAGE"
+    ],
+    [
+      17,
+      34,
+      0,
+      35,
+      0,
+      "IMAGE"
+    ],
+    [
+      19,
+      38,
+      0,
+      39,
+      0,
+      "IMAGE"
+    ],
+    [
+      20,
+      40,
+      0,
+      41,
+      0,
+      "IMAGE"
+    ],
+    [
+      22,
+      34,
+      0,
+      37,
+      0,
+      "IMAGE"
+    ],
+    [
+      23,
+      38,
+      0,
+      40,
+      0,
+      "IMAGE"
+    ],
+    [
+      24,
+      42,
+      0,
+      43,
+      0,
+      "IMAGE"
+    ],
+    [
+      25,
+      38,
+      0,
+      42,
+      0,
+      "IMAGE"
+    ],
+    [
+      26,
+      44,
+      0,
+      29,
+      0,
+      "IMAGE"
+    ],
+    [
+      27,
+      45,
+      0,
+      46,
+      0,
+      "IMAGE"
+    ],
+    [
+      28,
+      45,
+      0,
+      32,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 6,
+      "title": "产品精修",
+      "bounding": [
+        -1347.2100307347357,
+        2192.3745332048916,
+        1714.0867283082866,
+        1852.892284611533
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 1,
+      "title": "一键抠图",
+      "bounding": [
+        -406.672579336054,
+        2250.143318123277,
+        764.2004810488477,
+        397.6
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "智能抠图与主体处理",
+      "bounding": [
+        -1322.252741487936,
+        2235.9745332048915,
+        896.9931205403218,
+        580.4359083830997
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "元素编辑与二次创作",
+      "bounding": [
+        -1322.9102393949838,
+        3441.9390196839904,
+        962.5560960945497,
+        575.6
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "【分镜1】 卧室空镜",
+      "bounding": [
+        610.2006134789083,
+        2187.6387396313603,
+        1184.8529752141758,
+        612.4229568647512
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "瑕疵修复与质感提升",
+      "bounding": [
+        -1311.9868265301627,
+        2838.9046182607462,
+        933.4590651525871,
+        575.6
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 7,
+      "title": "【分镜3】 模特远景",
+      "bounding": [
+        609.7476837409331,
+        2849.4810128417917,
+        1184.8529752141758,
+        612.4229568647512
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 8,
+      "title": "【分镜2】 手部特写",
+      "bounding": [
+        1844.3629442795925,
+        2196.9561772615443,
+        1184.8529752141758,
+        612.4229568647512
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 9,
+      "title": "【分镜4】 模特近景",
+      "bounding": [
+        1835.962244208438,
+        2852.4262242229597,
+        1184.8529752141758,
+        612.4229568647512
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 10,
+      "title": "【分镜5】 产品近景",
+      "bounding": [
+        622.1493054576642,
+        3495.420970779114,
+        1184.8529752141758,
+        612.4229568647512
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 11,
+      "title": "【分镜6】 模特使用产品",
+      "bounding": [
+        1852.0951445482626,
+        3505.955663524709,
+        1184.8529752141758,
+        612.4229568647512
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 12,
+      "title": "【分镜7】 模特翻包",
+      "bounding": [
+        626.1050081406796,
+        4190.968174146242,
+        1184.8529752141758,
+        612.4229568647512
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 13,
+      "title": "【分镜8】 模特涂口红",
+      "bounding": [
+        1858.4315730069973,
+        4205.482271949715,
+        1184.8529752141758,
+        612.4229568647512
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 14,
+      "title": "【分镜9】 模特背着产品展示",
+      "bounding": [
+        629.0753725589044,
+        4857.539167959696,
+        1184.8529752141758,
+        612.4229568647512
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 15,
+      "title": "【分镜10】 模特背着产品展示",
+      "bounding": [
+        1861.8387085094969,
+        4905.875157737651,
+        1184.8529752141758,
+        612.4229568647512
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 16,
+      "title": "【分镜10】 模特背着产品展示",
+      "bounding": [
+        1854.2900709411842,
+        5584.454561982211,
+        1184.8529752141758,
+        612.4229568647512
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "ds": {
+      "scale": 0.5629180809990797,
+      "offset": [
+        1396.9309842639582,
+        -2967.7845314397455
+      ]
+    },
+    "links_added_by_ue": [],
+    "frontendVersion": "1.42.8",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

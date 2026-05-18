@@ -6,74 +6,93 @@
   <title>About · 陈彤</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500&family=Special+Elite&family=Noto+Sans+HK:wght@400;500&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500&family=Inter:wght@300;400;600;700&family=Special+Elite&family=Noto+Sans+HK:wght@400;500;700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="inner">
+<body class="inner about">
 
   <header>
-    <nav class="nav code">
-      <a class="brand" href="./index.html">Chen Tong.</a>
-      <a class="nav-1" href="./aigc.html">Works</a>
-      <a class="nav-2" href="./experience.html">Experience</a>
-      <a class="nav-3 active" href="./about.html">About</a>
+    <nav class="pnav">
+      <a class="pnav-item" href="./index.html">Home</a>
+      <a class="pnav-item" href="./aigc.html">Portfolio</a>
+      <a class="pnav-item" href="./experience.html">Experience</a>
+      <a class="pnav-item active" href="./about.html">Introduction</a>
     </nav>
   </header>
 
   <main>
-    <div class="page-title">About.</div>
-    <div class="page-sub">
-      在 AI 时代认真做内容的运营人 · ISTJ · 跟 AI 搭档做内容增长的第 3 年 · 5 年全平台账号操盘 → AIGC 内容全链路落地
-    </div>
+    <div class="page-title">Introduction.</div>
 
-    <div class="skills-grid">
-      <div class="skill-block">
-        <h3>Other Skills.</h3>
-        <ul>
-          <li>技能一（例：Photoshop / 剪映 / Figma）</li>
-          <li>技能二（例：基础摄影 / 分镜脚本）</li>
-          <li>技能三（例：英文沟通 / 会议同传）</li>
-        </ul>
-      </div>
-      <div class="skill-block">
-        <h3>Taste.</h3>
-        <p>
-          一两句话讲讲你看什么、逛什么、被什么东西滋养。
-          比如："长期看 Pinterest、关注 X 位设计师、爱逛独立书店"。
-          让招聘方隐约觉得——这个人眼睛是亮的。
-        </p>
-      </div>
-    </div>
+    <div class="about-board">
 
-    <h3 style="font-family:'Special Elite',serif;font-size:26px;margin:40px 0 10px;letter-spacing:-.5px;color:#111;">Moodboard.</h3>
-    <div class="moodboard">
-      <div class="mood">RAW 01 · 风格关键词</div>
-      <div class="mood">RAW 02 · 风格关键词</div>
-      <div class="mood">RAW 03 · 风格关键词</div>
-      <div class="mood">RAW 04 · 风格关键词</div>
-      <div class="mood">RAW 05 · 风格关键词</div>
-      <div class="mood">RAW 06 · 风格关键词</div>
-    </div>
+      <!-- ===== part01 · Hi 我是陈彤 ===== -->
+      <img class="ab-photo1" src="./images/about/photo1.png" alt="陈彤照片 1" />
+      <img class="ab-photo2" src="./images/about/photo2.png" alt="陈彤照片 2" />
+      <h1 class="ab-title-hi">Hi，我是陈彤</h1>
+      <p class="ab-subtitle">4 年 AIGC 实战经验，覆盖内容生产全链路</p>
+      <a class="ab-btn ab-btn-resume" href="./resume.pdf" download="陈彤-简历.pdf">下载简历</a>
+      <a class="ab-btn ab-btn-contact" href="mailto:494885025@qq.com">联系我</a>
 
-    <h3 style="font-family:'Special Elite',serif;font-size:26px;margin:48px 0 10px;letter-spacing:-.5px;color:#111;">Contact.</h3>
-    <div style="border-top:1px solid #DDD;">
-      <div style="display:flex;align-items:baseline;gap:22px;padding:14px 0;border-bottom:1px dashed #DDD;">
-        <span style="font-family:'Source Code Pro',monospace;font-size:12px;letter-spacing:2px;color:#999;min-width:110px;">EMAIL</span>
-        <span style="color:#111;">your@email.com</span>
-      </div>
-      <div style="display:flex;align-items:baseline;gap:22px;padding:14px 0;border-bottom:1px dashed #DDD;">
-        <span style="font-family:'Source Code Pro',monospace;font-size:12px;letter-spacing:2px;color:#999;min-width:110px;">WECHAT</span>
-        <span style="color:#111;">your_wechat_id</span>
-      </div>
+      <!-- ===== part02 · 技能杯 ===== -->
+      <div class="ab-part02-bg"></div>
+      <img class="ab-skill-cup" src="./images/about/skill-cup.png" alt="技能杯" />
+      <h2 class="ab-title-skill">技能杯</h2>
+      <p class="ab-skill-tag">我想要，我得到</p>
+
+      <p class="ab-tools-text ab-tools-text-1">此网站由</p>
+      <img class="ab-tool ab-tool-ps" src="./images/about/tool-ps.png" alt="Photoshop" />
+      <span class="ab-plus ab-plus-1">+</span>
+      <img class="ab-tool ab-tool-figma" src="./images/about/tool-figma.png" alt="Figma" />
+      <span class="ab-plus ab-plus-2">+</span>
+      <img class="ab-tool ab-tool-claude" src="./images/about/tool-claude.png" alt="Claude" />
+      <p class="ab-tools-text ab-tools-text-2">制作而成</p>
+      <p class="ab-tool-label ab-tool-label-1">（手绘）</p>
+      <p class="ab-tool-label ab-tool-label-2">（排版）</p>
+      <p class="ab-tool-label ab-tool-label-3">（代码）</p>
+
+      <!-- ===== part03 · 其他技能 ===== -->
+      <h2 class="ab-title-skills">其他技能</h2>
+
+      <img class="ab-sticker" src="./images/about/sticker.png" alt="贴纸 / APP 图标设计" />
+      <p class="ab-sticker-label">设计贴纸、APP图标</p>
+
+      <img class="ab-icon ab-icon-163music"   src="./images/about/icon-163music.png"   alt="" />
+      <img class="ab-icon ab-icon-weibo"      src="./images/about/icon-weibo.png"      alt="" />
+      <img class="ab-icon ab-icon-meituan"    src="./images/about/icon-meituan.png"    alt="" />
+      <img class="ab-icon ab-icon-qqmusic"    src="./images/about/icon-qqmusic.png"    alt="" />
+      <img class="ab-icon ab-icon-eleme"      src="./images/about/icon-eleme.png"      alt="" />
+      <img class="ab-icon ab-icon-douyin"     src="./images/about/icon-douyin.png"     alt="" />
+      <img class="ab-icon ab-icon-phone"      src="./images/about/icon-phone.png"      alt="" />
+      <img class="ab-icon ab-icon-weather"    src="./images/about/icon-weather.png"    alt="" />
+      <img class="ab-icon ab-icon-calculator" src="./images/about/icon-calculator.png" alt="" />
+
+      <img class="ab-draw ab-draw-1" src="./images/about/draw1.png" alt="手绘作品 1" />
+      <img class="ab-draw ab-draw-2" src="./images/about/draw4.png" alt="手绘作品 2" />
+      <img class="ab-draw ab-draw-3" src="./images/about/draw3.png" alt="手绘作品 3" />
+      <img class="ab-draw ab-draw-4" src="./images/about/draw2.png" alt="手绘作品 4" />
+
+      <p class="ab-draw-label">手绘作品</p>
     </div>
   </main>
 
   <footer>
     <div class="footer-inner code">
-      <div class="footer-item"><b>Email</b><span>your@email.com</span></div>
-      <div class="footer-item"><b>Rednote</b><span class="cn-serif">@陈彤</span></div>
-      <div class="footer-item"><b>Douyin</b><span>@陈彤</span></div>
-      <div class="footer-item"><b>Rights</b><span>Made with ink &amp; algorithms · 2026</span></div>
+      <div class="footer-item">
+        <img class="footer-icon" src="./images/UI/Email.png" alt="Email" />
+        <a href="mailto:494885025@qq.com">494885025@qq.com</a>
+      </div>
+      <div class="footer-item">
+        <img class="footer-icon" src="./images/UI/Rednote.png" alt="Rednote" />
+        <a class="cn-serif" href="https://www.xiaohongshu.com/user/profile/608949a9000000000101de95?xsec_token=ABeM8Un3uuypA7dOGqYhXfcfPrAej8FT4cInKEH543rTo%3D&amp;xsec_source=pc_search" target="_blank" rel="noopener">一只橙橙子</a>
+      </div>
+      <div class="footer-item">
+        <img class="footer-icon" src="./images/UI/Linkedin.png" alt="LinkedIn" />
+        <a href="https://www.linkedin.com/in/tongchen00/" target="_blank" rel="noopener">www.linkedin.com/in/tongchen00/</a>
+      </div>
+      <div class="footer-item">
+        <img class="footer-icon" src="./images/UI/Rights.png" alt="Rights" />
+        <span>Growing ideas, one orange at a time.</span>
+      </div>
     </div>
   </footer>
 </body>

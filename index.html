@@ -6,17 +6,17 @@
   <title>陈彤 · AIGC Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500&family=Special+Elite&family=Noto+Sans+HK:wght@400;500&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500&family=Inter:wght@300;400;600&family=Special+Elite&family=Noto+Sans+HK:wght@400;500&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="home">
 
   <header>
     <nav class="nav code">
-      <a class="brand" href="./index.html">Chen Tong.</a>
-      <a class="nav-1" href="./aigc.html">Works</a>
+      <a class="brand" href="./index.html">Home</a>
+      <a class="nav-1" href="./aigc.html">Portfolio</a>
       <a class="nav-2" href="./experience.html">Experience</a>
-      <a class="nav-3" href="./about.html">About</a>
+      <a class="nav-3" href="./about.html">Introduction</a>
     </nav>
   </header>
 
@@ -27,176 +27,64 @@
         <h2 class="en-special">This Is Chen Tong's Sketchbook.</h2>
       </div>
       <div class="intro-cta">
-        <p class="en-special">Let's Flip Through It.</p>
+        <p class="en-special">Let's Pick an orange.</p>
       </div>
     </section>
 
     <section class="visual">
-      <div class="tree-wrap" aria-label="hand-drawn tree illustration">
-        <div id="p5-overlay"></div>
-        <img class="tree" id="treeImg" src="./tree.png" alt="Tree illustration"
-             onerror="this.style.display='none'; document.getElementById('treeFallback').style.display='flex';" />
-        <div class="tree-missing" id="treeFallback" style="display:none;">
-          把手绘树 PNG 命名为 <b>tree.png</b> 放到 my-portfolio 根目录<br/>
-          （建议 520×520、透明底、粗线条黑色树）
+      <div class="tree-wrap" aria-label="hand-drawn orange tree">
+        <img class="tree" src="./images/tree_new/tree.png" alt="Orange tree" />
+
+        <!-- 飘落的叶子（6 片错开节奏） -->
+        <div class="leaves-layer" aria-hidden="true">
+          <img class="leaf leaf-1" src="./images/tree/leaves.png" alt="" />
+          <img class="leaf leaf-2" src="./images/tree/leaves.png" alt="" />
+          <img class="leaf leaf-3" src="./images/tree/leaves.png" alt="" />
+          <img class="leaf leaf-4" src="./images/tree/leaves.png" alt="" />
+          <img class="leaf leaf-5" src="./images/tree/leaves.png" alt="" />
+          <img class="leaf leaf-6" src="./images/tree/leaves.png" alt="" />
         </div>
 
-        <a href="./experience.html" class="label experience cn-serif">运营履历 / Experience</a>
-        <a href="./aigc.html"       class="label portfolio cn-serif">作品集 / Works</a>
-        <a href="./about.html"      class="label introduction cn-serif">自我介绍 / About</a>
+        <!-- 3 颗橙子，每颗对应一个子页面；位置用百分比，方便后续微调 -->
+        <a class="orange-item portfolio" href="javascript:void(0)" data-target="./aigc.html">
+          <img class="orange" src="./images/tree_new/orange1.png" alt="" />
+          <span class="orange-label cn-serif">作品集<br/>Portfolio</span>
+        </a>
+        <a class="orange-item experience" href="javascript:void(0)" data-target="./experience.html">
+          <img class="orange" src="./images/tree_new/orange2.png" alt="" />
+          <span class="orange-label cn-serif">个人经历<br/>Experience</span>
+        </a>
+        <a class="orange-item introduction" href="javascript:void(0)" data-target="./about.html">
+          <img class="orange" src="./images/tree_new/orange3.png" alt="" />
+          <span class="orange-label cn-serif">自我介绍<br/>Introduction</span>
+        </a>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="footer-inner code">
-      <div class="footer-item"><b>Email</b><span>your@email.com</span></div>
-      <div class="footer-item"><b>Rednote</b><span class="cn-serif">@陈彤</span></div>
-      <div class="footer-item"><b>Douyin</b><span>@陈彤</span></div>
-      <div class="footer-item"><b>Rights</b><span>Made with ink &amp; algorithms · 2026</span></div>
+      <div class="footer-item">
+        <img class="footer-icon" src="./images/UI_new/Email.png" alt="Email" />
+        <a href="mailto:494885025@qq.com">494885025@qq.com</a>
+      </div>
+      <div class="footer-item">
+        <img class="footer-icon" src="./images/UI_new/Rednote.png" alt="Rednote" />
+        <a class="cn-serif" href="https://www.xiaohongshu.com/user/profile/608949a9000000000101de95?xsec_token=ABeM8Un3uuypA7dOGqYhXfcfPrAej8FT4cInKEH543rTo%3D&amp;xsec_source=pc_search" target="_blank" rel="noopener">一只橙橙子</a>
+      </div>
+      <div class="footer-item">
+        <img class="footer-icon" src="./images/UI_new/Linkedin.png" alt="LinkedIn" />
+        <a href="https://www.linkedin.com/in/tongchen00/" target="_blank" rel="noopener">www.linkedin.com/in/tongchen00/</a>
+      </div>
+      <div class="footer-item">
+        <img class="footer-icon" src="./images/UI_new/Rights.png" alt="Rights" />
+        <span>Growing ideas, one orange at a time.</span>
+      </div>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
   <script>
-    // ========== P5 Tree + 字母悬停掉落 ==========
-    let treeImg;
-    let particles = [];
-    let branchPoints = [];
-    // 自拟短句池 —— 鼠标悬停树时字母从树枝掉下
-    let letterPool = "做内容的人应当同时是讲故事的人和算法的朋友 让AI替我做重复的那一半 把时间留给有灵魂的那一半 一个人加一个AI等于一支队伍 Content with soul AIGC every day".replace(/\s+/g, "").split("");
-    let poemIndex = 0;
-    let isFinished = false;
-    let groundMap = [];
-    let currentSway = 0;
-    let mobileShakeTimer = 0;
-    let config = { fontSize:15, maxFallSpeed:1.5, drag:0.97, spawnIntensity:12, swayAmplitude:0.03, letterSpacing:20, groundY:0.95, driftRange:0.5, rotateSpeed:0.7, margin:0.2 };
-
-    function preload(){
-      treeImg = loadImage('./tree.png',
-        () => console.log("tree.png loaded"),
-        (e) => console.warn("tree.png not found — using fallback")
-      );
-    }
-    function setup(){
-      pixelDensity(1);
-      if(!treeImg || !treeImg.width) return;
-      let c = createCanvas(treeImg.width, treeImg.height);
-      c.parent('p5-overlay');
-      let baseLine = height * config.groundY;
-      for(let i=0;i<width;i++) groundMap[i] = baseLine;
-      treeImg.loadPixels();
-      for(let x=0;x<treeImg.width;x+=6){
-        for(let y=0;y<treeImg.height;y+=6){
-          let idx = (x + y * treeImg.width) * 4;
-          if(treeImg.pixels[idx + 3] > 50) branchPoints.push({x,y});
-        }
-      }
-      textFont('Georgia'); textSize(config.fontSize); textAlign(CENTER, CENTER);
-    }
-    let hasHiddenStaticTree = false;
-    function draw(){
-      if(!treeImg || !treeImg.width) return;
-      clear();
-      let canvasElem = document.querySelector('#p5-overlay canvas');
-      let eMX = mouseX, eMY = mouseY;
-      if(canvasElem){
-        eMX = mouseX * (width / canvasElem.offsetWidth);
-        eMY = mouseY * (height / canvasElem.offsetHeight);
-      }
-      let m = width * config.margin;
-      let mouseHover = (eMX > m && eMX < width-m && eMY > m && eMY < height-m);
-      if(mobileShakeTimer > 0) mobileShakeTimer--;
-      let isHovering = mouseHover || (mobileShakeTimer > 0);
-
-      if(!hasHiddenStaticTree && frameCount > 5){
-        let t = document.getElementById('treeImg');
-        if(t) t.style.opacity = '0';
-        hasHiddenStaticTree = true;
-      }
-
-      let targetSway = (isHovering && !isFinished) ? sin(frameCount*0.08)*config.swayAmplitude : 0;
-      currentSway = lerp(currentSway, targetSway, 0.05);
-
-      push();
-      translate(width/2, height);
-      shearX(currentSway);
-      image(treeImg, -width/2, -height, width, height);
-      pop();
-
-      if(isHovering && !isFinished){
-        for(let i=0;i<config.spawnIntensity;i++){
-          if(poemIndex < letterPool.length){
-            let pt = random(branchPoints);
-            if(letterPool[poemIndex] !== " ") particles.push(new Letter(pt.x, pt.y, letterPool[poemIndex]));
-            poemIndex++;
-          } else { isFinished = true; }
-        }
-      }
-      for(let p of particles){ p.update(); p.display(); }
-
-      if(canvasElem){
-        let ch = canvasElem.offsetHeight;
-        let labels = [
-          { sel:'.label.experience',   h:0.71, noiseOff:100 },
-          { sel:'.label.portfolio',    h:0.46, noiseOff:200 },
-          { sel:'.label.introduction', h:0.25, noiseOff:300 }
-        ];
-        for(let l of labels){
-          let el = document.querySelector(l.sel);
-          if(el){
-            let swayX = -ch * l.h * Math.tan(currentSway);
-            let wn = noise(frameCount*0.01 + l.noiseOff);
-            let wind = (wn - 0.5) * 0.2;
-            let rot = currentSway * 0.9 + wind;
-            el.style.transformOrigin = "top center";
-            el.style.transform = `translateX(${swayX}px) rotate(${rot}rad) skewX(${rot*15}deg)`;
-          }
-        }
-      }
-    }
-    class Letter{
-      constructor(x,y,c){
-        this.pos=createVector(x,y); this.vel=createVector(random(-0.5,0.5), random(0.1,0.5));
-        this.acc=createVector(0,0.04); this.char=c; this.isStatic=false;
-        this.angle=random(TWO_PI); this.noiseSeed=random(1000); this.finalAngle=random(-0.4,0.4);
-      }
-      update(){
-        if(this.isStatic) return;
-        let breeze = map(noise(this.noiseSeed, frameCount*0.015), 0, 1, -config.driftRange, config.driftRange);
-        this.vel.x += breeze * 0.15;
-        this.vel.add(this.acc); this.vel.mult(config.drag);
-        if(this.vel.y > config.maxFallSpeed) this.vel.y = config.maxFallSpeed;
-        this.pos.add(this.vel);
-        this.angle += (this.vel.mag()*0.08) * config.rotateSpeed;
-        let xIdx = floor(constrain(this.pos.x, 0, width-1));
-        if(this.pos.y >= groundMap[xIdx]){
-          this.pos.y = groundMap[xIdx]; this.isStatic = true;
-          let r = config.letterSpacing/2;
-          for(let i=-r;i<=r;i++){
-            let cx = floor(constrain(xIdx+i, 0, width-1));
-            let lift = map(abs(i), 0, r, config.fontSize*0.65, 0);
-            groundMap[cx] -= lift;
-          }
-        }
-      }
-      display(){
-        push(); translate(this.pos.x, this.pos.y);
-        rotate(this.isStatic ? this.finalAngle : this.angle);
-        fill(70, this.isStatic ? 200 : 160); noStroke();
-        text(this.char, 0, 0); pop();
-      }
-    }
-    function mousePressed(){ handleInput(); }
-    function touchStarted(){ handleInput(); }
-    function handleInput(){
-      let c = document.querySelector('#p5-overlay canvas');
-      if(c && mouseX>0 && mouseX<width && mouseY>0 && mouseY<height) mobileShakeTimer = 180;
-    }
-  </script>
-
-  <script>
-    // 字符拆分入场动画
+    // 字符拆分入场动画（沿用）
     document.addEventListener('DOMContentLoaded', () => {
       const targets = [
         { sel:'.intro-top h1',  baseDelay:0.1 },
@@ -210,9 +98,7 @@
         let html = '';
         for(let i=0;i<text.length;i++){
           const ch = text[i];
-          const rnd = Math.random()*0.8;
-          const idx = i*0.02;
-          const delay = t.baseDelay + rnd + idx;
+          const delay = t.baseDelay + Math.random()*0.8 + i*0.02;
           if(t.sel === '.intro-cta p'){
             const vanish = delay + 1 + 3 + Math.random()*0.5;
             html += `<span class="char" style="animation-name:floatUpChar,driftAway;animation-duration:1s,2s;animation-delay:${delay}s,${vanish}s;animation-fill-mode:forwards,forwards;">${ch}</span>`;
@@ -221,6 +107,26 @@
           }
         }
         el.innerHTML = html;
+      });
+    });
+  </script>
+
+  <script>
+    // 橙子交互：点击 → 掉落动画 → 跳转到对应页面
+    const oranges = document.querySelectorAll('.orange-item');
+    let isBusy = false;
+
+    oranges.forEach(o => {
+      o.addEventListener('click', e => {
+        e.preventDefault();
+        if (isBusy) return;
+        isBusy = true;
+        const target = o.dataset.target;
+        o.classList.add('falling');
+        // 下落动画 ~900ms 完成后跳转
+        setTimeout(() => {
+          window.location.href = target;
+        }, 700);
       });
     });
   </script>
