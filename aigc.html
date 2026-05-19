@@ -8,6 +8,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500&family=Inter:wght@300;400;600&family=Special+Elite&family=Noto+Sans+HK:wght@400;500&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="preload" as="image" href="./images/portfolio/toptree.png" fetchpriority="high">
+  <link rel="preload" as="image" href="./images/portfolio/ip.png" fetchpriority="high">
+  <link rel="preload" as="image" href="./images/portfolio/chuangzuo.png" fetchpriority="high">
+  <link rel="preload" as="image" href="./images/portfolio/shipin.png" fetchpriority="high">
+  <link rel="preload" as="image" href="./images/portfolio/gongzuoliu.png" fetchpriority="high">
 </head>
 <body class="portfolio">
 
@@ -24,27 +29,27 @@
     <section class="portfolio-visual">
       <div class="ptree-wrap">
         <!-- 纯树（无橙子），来自 Figma toptree 原始填充 -->
-        <img loading="lazy" class="ptree" src="./images/portfolio/toptree.png" alt="orange tree" />
+        <img class="ptree" src="./images/portfolio/toptree.png" alt="orange tree" fetchpriority="high" />
 
         <!-- 4 颗橙子：单独 PNG + 文字标签，位置按 Figma 每个 group 的百分比 -->
         <a class="ptree-orange ip" href="javascript:void(0)" data-kind="ip"
            aria-label="IP 全链路创作">
-          <img loading="lazy" src="./images/portfolio/ip.png" alt="" />
+          <img src="./images/portfolio/ip.png" alt="" fetchpriority="high" />
           <span class="ptree-label">IP</span>
         </a>
         <a class="ptree-orange chuangzuo" href="javascript:void(0)" data-kind="visual"
            data-peel="./images/oranges/ocean-peel-long.png" aria-label="海报创作">
-          <img loading="lazy" src="./images/portfolio/chuangzuo.png" alt="" />
+          <img src="./images/portfolio/chuangzuo.png" alt="" fetchpriority="high" />
           <span class="ptree-label">海报</span>
         </a>
         <a class="ptree-orange shipin" href="javascript:void(0)" data-kind="video"
            data-peel="./images/oranges/grasslan-peel-long.png" aria-label="AI 短视频">
-          <img loading="lazy" src="./images/portfolio/shipin.png" alt="" />
+          <img src="./images/portfolio/shipin.png" alt="" fetchpriority="high" />
           <span class="ptree-label">AI视频</span>
         </a>
         <a class="ptree-orange gongzuoliu" href="javascript:void(0)" data-kind="workflow"
            aria-label="自动化工作流">
-          <img loading="lazy" src="./images/portfolio/gongzuoliu.png" alt="" />
+          <img src="./images/portfolio/gongzuoliu.png" alt="" fetchpriority="high" />
           <span class="ptree-label">工作流</span>
         </a>
       </div>

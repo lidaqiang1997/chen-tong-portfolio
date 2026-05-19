@@ -8,6 +8,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500&family=Inter:wght@300;400;600&family=Special+Elite&family=Noto+Sans+HK:wght@400;500&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="preload" as="image" href="./images/tree_new/tree.png" fetchpriority="high">
+  <link rel="preload" as="image" href="./images/tree_new/orange1.png" fetchpriority="high">
+  <link rel="preload" as="image" href="./images/tree_new/orange2.png" fetchpriority="high">
+  <link rel="preload" as="image" href="./images/tree_new/orange3.png" fetchpriority="high">
+  <link rel="prefetch" as="image" href="./images/portfolio/toptree.png">
+  <link rel="prefetch" as="image" href="./images/portfolio/ip.png">
+  <link rel="prefetch" as="image" href="./images/portfolio/chuangzuo.png">
+  <link rel="prefetch" as="image" href="./images/portfolio/shipin.png">
+  <link rel="prefetch" as="image" href="./images/portfolio/gongzuoliu.png">
 </head>
 <body class="home">
 
@@ -33,7 +42,7 @@
 
     <section class="visual">
       <div class="tree-wrap" aria-label="hand-drawn orange tree">
-        <img loading="lazy" class="tree" src="./images/tree_new/tree.png" alt="Orange tree" />
+        <img class="tree" src="./images/tree_new/tree.png" alt="Orange tree" fetchpriority="high" />
 
         <!-- 飘落的叶子（6 片错开节奏） -->
         <div class="leaves-layer" aria-hidden="true">
@@ -47,15 +56,15 @@
 
         <!-- 3 颗橙子，每颗对应一个子页面；位置用百分比，方便后续微调 -->
         <a class="orange-item portfolio" href="javascript:void(0)" data-target="./aigc.html">
-          <img loading="lazy" class="orange" src="./images/tree_new/orange1.png" alt="" />
+          <img class="orange" fetchpriority="high" src="./images/tree_new/orange1.png" alt="" />
           <span class="orange-label cn-serif">作品集<br/>Portfolio</span>
         </a>
         <a class="orange-item experience" href="javascript:void(0)" data-target="./experience.html">
-          <img loading="lazy" class="orange" src="./images/tree_new/orange2.png" alt="" />
+          <img class="orange" fetchpriority="high" src="./images/tree_new/orange2.png" alt="" />
           <span class="orange-label cn-serif">个人经历<br/>Experience</span>
         </a>
         <a class="orange-item introduction" href="javascript:void(0)" data-target="./about.html">
-          <img loading="lazy" class="orange" src="./images/tree_new/orange3.png" alt="" />
+          <img class="orange" fetchpriority="high" src="./images/tree_new/orange3.png" alt="" />
           <span class="orange-label cn-serif">自我介绍<br/>Introduction</span>
         </a>
       </div>
