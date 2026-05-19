@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500&family=Inter:wght@300;400;600;700&family=Special+Elite&family=Noto+Sans+HK:wght@400;500;700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="preload" as="image" href="./images/about/photo1.png" fetchpriority="high">
+  <link rel="preload" as="image" href="./images/about/photo2.png" fetchpriority="high">
 </head>
 <body class="inner about">
 
@@ -26,8 +28,8 @@
     <div class="about-board">
 
       <!-- ===== part01 · Hi 我是陈彤 ===== -->
-      <img loading="lazy" class="ab-photo1" src="./images/about/photo1.png" alt="陈彤照片 1" />
-      <img loading="lazy" class="ab-photo2" src="./images/about/photo2.png" alt="陈彤照片 2" />
+      <img class="ab-photo1" src="./images/about/photo1.png" alt="陈彤照片 1" fetchpriority="high" />
+      <img class="ab-photo2" src="./images/about/photo2.png" alt="陈彤照片 2" fetchpriority="high" />
       <h1 class="ab-title-hi">Hi，我是陈彤</h1>
       <p class="ab-subtitle">4 年 AIGC 实战经验，覆盖内容生产全链路</p>
       <a class="ab-btn ab-btn-resume" href="./resume.pdf" download="陈彤-简历.pdf">下载简历</a>
