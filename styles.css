@@ -2844,7 +2844,7 @@ body.portfolio .peel-board{ top: 80px; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 22px;
+  gap: 10px;
   opacity: 0;
   pointer-events: none;
   transition: opacity .3s ease, transform .5s cubic-bezier(.2,.8,.3,1);
@@ -2890,12 +2890,12 @@ body.portfolio .peel-board{ top: 80px; }
 
 /* 橙色渐变标签（4 个字，挂在视频卡下方）*/
 .bv-label{
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 13px;
   font-weight: 600;
   color: #fff;
   background: linear-gradient(135deg, #ffc078 0%, #ff9536 55%, #ff7a1f 100%);
-  padding: 7px 18px;
+  padding: 5px 16px;
   min-width: 78px;
   border-radius: 6px;
   letter-spacing: 2px;
@@ -2903,6 +2903,32 @@ body.portfolio .peel-board{ top: 80px; }
   white-space: nowrap;
   text-align: center;
   user-select: none;
+}
+
+/* 短屏幕（笔记本 16:10 / 16:9）：整体缩小，避免标签被 footer 挡住 */
+@media (max-height: 850px){
+  .bv{
+    width: clamp(110px, 10vw, 175px);
+    gap: 8px;
+  }
+  .bv-label{
+    font-size: 12px;
+    padding: 4px 12px;
+    letter-spacing: 1.5px;
+    min-width: 68px;
+  }
+}
+@media (max-height: 720px){
+  .bv{
+    width: clamp(95px, 8.5vw, 150px);
+    gap: 6px;
+  }
+  .bv-label{
+    font-size: 11px;
+    padding: 3px 10px;
+    letter-spacing: 1px;
+    min-width: 60px;
+  }
 }
 
 /* 视频播放弹窗 */
