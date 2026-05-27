@@ -40,7 +40,7 @@ a{ color: inherit; text-decoration: none; }
 /* ========== Typography helpers ========== */
 .en-special{ font-family: "Special Elite", serif; }
 .code      { font-family: "AR One Sans", sans-serif; }
-.cn-serif  { font-family: "Source Han Sans SC", "Noto Sans HK", sans-serif; }
+.cn-serif  { font-family: "Source Han Sans SC", "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif; }
 
 /* ========== Top Nav (shared) ========== */
 header{
@@ -428,7 +428,7 @@ body.inner main{
   margin: 20px 0 12px 100px;
 }
 .page-sub{
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 15px;
   color: var(--text);
   max-width: 640px;
@@ -442,7 +442,7 @@ body.inner main{
   max-width: 1680px;
   margin: 80px auto 60px;
   aspect-ratio: 1680 / 4257;
-  font-family: "Noto Sans HK", "Inter", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", "Inter", sans-serif;
   isolation: isolate;
 }
 .about-board > *{ position: absolute; }
@@ -466,7 +466,7 @@ body.inner main{
   left: 58.75%;  top: 1.13%;
   width: 33.26%;
   margin: 0;
-  font-family: "Noto Sans HK", "Inter", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", "Inter", sans-serif;
   font-size: clamp(28px, 4vw, 64px);
   font-weight: 700;
   color: #000;
@@ -525,7 +525,7 @@ body.inner main{
   left: 15.83%;  top: 18.61%;
   width: 33.26%;
   margin: 0;
-  font-family: "Noto Sans HK", "Inter", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", "Inter", sans-serif;
   font-size: clamp(28px, 4vw, 64px);
   font-weight: 700;
   color: #000;
@@ -593,7 +593,7 @@ body.inner main{
   left: 33.37%;  top: 38.71%;
   width: 33.26%;
   margin: 0;
-  font-family: "Noto Sans HK", "Inter", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", "Inter", sans-serif;
   font-size: clamp(28px, 4vw, 64px);
   font-weight: 700;
   color: #000;
@@ -697,7 +697,7 @@ body.inner main{
   top: 0; left: 0;
   width: 100%;
   aspect-ratio: 1647 / 1960;
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 .exp-hero > *{
   position: absolute !important;
@@ -736,7 +736,7 @@ body.inner main{
   position: absolute;
   width: 11.08%;
   text-align: center;
-  font-family: "Special Elite", "Noto Sans HK", sans-serif;
+  font-family: "Special Elite", "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-weight: 700;
   font-size: clamp(16px, 2.2vw, 28px);
   color: var(--ink);
@@ -798,7 +798,7 @@ body.inner main{
   align-items: start;
 }
 .col-left{
-  font-family: "Special Elite", "Noto Sans HK", sans-serif;
+  font-family: "Special Elite", "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -831,7 +831,7 @@ body.inner main{
   color: var(--muted);
   display: block;
   line-height: 1.5;
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 
 /* 右侧多个 job-item 的容器 */
@@ -848,7 +848,7 @@ body.inner main{
   transition: opacity 0.3s ease;
 }
 .job-desc{
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 14px;
   line-height: 1.8;
   color: var(--text);
@@ -861,7 +861,7 @@ body.inner main{
   padding-left: 18px;
 }
 .job-highlight-title{
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 15px;
   font-weight: 500;
   color: var(--ink);
@@ -870,7 +870,7 @@ body.inner main{
   min-height: 3.2em;
 }
 .job-highlight-text{
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 13px;
   line-height: 1.6;
   color: var(--text);
@@ -879,7 +879,7 @@ body.inner main{
 
 .job-role{
   text-align: right;
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -929,7 +929,7 @@ body.inner main{
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 13px;
   color: #FF9536;
   cursor: pointer;
@@ -1004,7 +1004,7 @@ body.inner main{
   background: #E8841E;
 }
 .proj-text{
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
   color: var(--text);
 }
 .proj-title{
@@ -1153,13 +1153,13 @@ body.inner main{
   text-transform: uppercase;
 }
 .acct-card .acct-stats{
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 13px;
   color: var(--ink);
   margin: 4px 0 6px;
 }
 .acct-card .acct-desc{
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 13px;
   color: var(--text);
   line-height: 1.6;
@@ -1193,7 +1193,7 @@ body.inner main{
   grid-template-columns: 1.5fr 1fr 120px;
   gap: 16px 20px;
   align-items: baseline;
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 .event-item{
   display: contents;
@@ -1448,7 +1448,7 @@ body.works main{
 .peel-item.is-video .peel-no{ color: rgba(255,255,255,.5); }
 .peel-cap{
   text-align: center;
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 12px;
   color: var(--text);
   margin-top: 8px;
@@ -1527,7 +1527,7 @@ body.works main{
   margin: 0 0 16px;
 }
 .fs-tagline{
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 18px;
   font-weight: 500;
   color: var(--ink);
@@ -1536,7 +1536,7 @@ body.works main{
   margin: -6px 0 28px;
 }
 .fs-targets{
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 15px;
   color: var(--text);
   line-height: 1.8;
@@ -1555,7 +1555,7 @@ body.works main{
   font-weight: 700;
 }
 .fs-subtitle{
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 15px;
   color: var(--text);
   line-height: 1.5;
@@ -1607,7 +1607,7 @@ body.works main{
   letter-spacing: -.3px;
 }
 .timeline-body{
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 14px;
   color: var(--text);
   line-height: 1.8;
@@ -1697,7 +1697,7 @@ div.timeline-img{
   max-width: 1468px;
   margin: 0 auto;
   aspect-ratio: 1468 / 2521;   /* 锁定画布比例，内部坐标用百分比 */
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 .wf-board img{
   position: absolute;
@@ -1744,7 +1744,7 @@ div.timeline-img{
   max-width: 1680px;
   margin: 0 auto;
   aspect-ratio: 1680 / 4072;
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
   overflow: hidden;
 }
 .wf-board-3 > *{
@@ -1893,7 +1893,7 @@ div.timeline-img{
   max-width: 1523px;
   margin: 0 auto;
   aspect-ratio: 1523 / 2388;
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 .wf-board-2 img{
   position: absolute;
@@ -2228,7 +2228,7 @@ div.timeline-img{
   margin: 6px 0 14px;
 }
 .wf-subh{
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 15px;
   font-weight: 600;
   color: var(--ink);
@@ -2287,7 +2287,7 @@ div.timeline-img{
   transform: scale(1.06);
 }
 .step03-hint{
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 14px;
   color: #555;
   letter-spacing: 2px;
@@ -2432,10 +2432,10 @@ div.timeline-img{
 .acct:nth-child(3n){ border-right: none; }
 .acct:not(:nth-child(3n+1)){ padding-left: 20px; }
 .acct-platform{ font-family: "Source Code Pro", monospace; font-size: 11px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; }
-.acct-name{ font-family: "Noto Sans HK", sans-serif; font-size: 17px; font-weight: 500; color: var(--ink); margin: 6px 0 4px; }
+.acct-name{ font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 17px; font-weight: 500; color: var(--ink); margin: 6px 0 4px; }
 .acct-stats{ display: flex; gap: 16px; font-family: "Source Code Pro", monospace; font-size: 12px; color: var(--text); margin: 6px 0 10px; }
 .acct-stats b{ color: var(--ink); font-weight: 500; }
-.acct-desc{ font-family: "Noto Sans HK", sans-serif; font-size: 13px; color: var(--text); line-height: 1.5; }
+.acct-desc{ font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 13px; color: var(--text); line-height: 1.5; }
 
 /* ===== About page (Skills) ===== */
 .skills-grid{
@@ -2456,9 +2456,9 @@ div.timeline-img{
   margin: 0 0 10px;
   letter-spacing: -.5px;
 }
-.skill-block ul{ padding-left: 18px; margin: 6px 0 0; font-family: "Noto Sans HK", sans-serif; color: var(--text); }
+.skill-block ul{ padding-left: 18px; margin: 6px 0 0; font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif; color: var(--text); }
 .skill-block li{ margin-bottom: 6px; }
-.skill-block p{ font-family: "Noto Sans HK", sans-serif; color: var(--text); margin: 0; }
+.skill-block p{ font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif; color: var(--text); margin: 0; }
 
 .moodboard{
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
@@ -2633,7 +2633,7 @@ body.portfolio main{ flex: 1; min-height: 0; }
   padding-left: 6%;
 }
 .tap-hint{
-  font-family: "Noto Sans HK", "Source Han Sans SC", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", "Source Han Sans SC", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.9;
@@ -2891,7 +2891,7 @@ body.portfolio .peel-board{ top: 80px; }
 
 /* 橙色渐变标签（4 个字，挂在视频卡下方）*/
 .bv-label{
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: "Noto Sans HK", "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 13px;
   font-weight: 600;
   color: #fff;
